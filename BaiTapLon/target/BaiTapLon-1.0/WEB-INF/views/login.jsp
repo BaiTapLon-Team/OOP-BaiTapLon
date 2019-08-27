@@ -95,7 +95,7 @@
 
         .form-content {
             box-sizing: border-box;
-            padding: 40px;
+            padding: 40px 40px 10px 40px;
         }
 
         #username,
@@ -125,7 +125,7 @@
 
         #save-pass {
             display: flex;
-            margin-left: 140px;
+            margin-left: 150px;
             margin-right: 30px;
             justify-content: space-between;
             align-items: center;
@@ -138,7 +138,7 @@
             color: #fff;
             border: 0;
             border-radius: 10px;
-            margin: 30px 0;
+            margin: 30px 0 0 0;
             font-size: 20px;
             font-family: Comfortaa-Bold;
             outline: none;
@@ -151,6 +151,15 @@
         .form-content input[type="submit"]:focus {
             box-shadow: 0 0 0 0.2rem rgba(40, 167, 69, .5);
         }
+
+        #error {
+            height: 25px;
+            padding: 10px 30px 30px 30px;
+            text-align: center;
+            font-size: 20px;
+            color: red;
+        }
+
     </style>
 </head>
 
@@ -181,6 +190,7 @@
         </div>
         <input type="submit" name="submit" value="Login">
     </form>
+    <div id="error">This is a error.</div>
 </div>
 </body>
 
