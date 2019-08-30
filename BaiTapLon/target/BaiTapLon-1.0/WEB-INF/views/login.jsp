@@ -131,6 +131,10 @@
             align-items: center;
         }
 
+        #save-pass a {
+            color: black;
+        }
+
         .form-content input[type="submit"] {
             width: 100px;
             height: 40px;
@@ -171,7 +175,7 @@
         </div>
 
     </div>
-    <form action="" class="form-content">
+    <form action="#" class="form-content" method="post">
         <div id="username">
             <span>Username</span>
             <input type="text" name="username" placeholder="Your Username" autocomplete="off">

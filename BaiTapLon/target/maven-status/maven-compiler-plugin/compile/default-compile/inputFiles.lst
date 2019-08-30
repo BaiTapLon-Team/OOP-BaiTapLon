@@ -1,2 +1,11 @@
-D:\Full code\JavaFull\JAVA-WEB-Intellij\BaiTapLon\src\main\java\com\baitaplon\controller\LoginController.java
-D:\Full code\JavaFull\JAVA-WEB-Intellij\BaiTapLon\src\main\java\com\baitaplon\controller\AdminController.java
+E:\GitHub\BTL\OOP-BaiTapLon\BaiTapLon\src\main\java\com\baitaplon\model\SinhVienDAO.java
+E:\GitHub\BTL\OOP-BaiTapLon\BaiTapLon\src\main\java\com\baitaplon\objects\GiaoVien.java
+E:\GitHub\BTL\OOP-BaiTapLon\BaiTapLon\src\main\java\com\baitaplon\objects\SinhVien.java
+E:\GitHub\BTL\OOP-BaiTapLon\BaiTapLon\src\main\java\com\baitaplon\model\ConnectDatabase.java
+E:\GitHub\BTL\OOP-BaiTapLon\BaiTapLon\src\main\java\com\baitaplon\objects\Admin.java
+E:\GitHub\BTL\OOP-BaiTapLon\BaiTapLon\src\main\java\com\baitaplon\model\GiaoVienDAO.java
+E:\GitHub\BTL\OOP-BaiTapLon\BaiTapLon\src\main\java\com\baitaplon\model\Management.java
+E:\GitHub\BTL\OOP-BaiTapLon\BaiTapLon\src\main\java\com\baitaplon\model\QuestionDAO.java
+E:\GitHub\BTL\OOP-BaiTapLon\BaiTapLon\src\main\java\com\baitaplon\controller\LoginController.java
+E:\GitHub\BTL\OOP-BaiTapLon\BaiTapLon\src\main\java\com\baitaplon\objects\ConNguoi.java
+E:\GitHub\BTL\OOP-BaiTapLon\BaiTapLon\src\main\java\com\baitaplon\controller\AdminController.java
