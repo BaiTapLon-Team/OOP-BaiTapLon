@@ -9,6 +9,7 @@ public class ConnectDatabase {
     private String userNameSQL = "sa";
     private String passWordSQL = "Vanhajvst123";
 
+
     public Connection getConnection () {
         Connection connection = null;
         try {

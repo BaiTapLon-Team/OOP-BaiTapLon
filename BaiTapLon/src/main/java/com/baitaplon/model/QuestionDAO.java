@@ -23,7 +23,7 @@ public class QuestionDAO implements Management {
         return null;
     }
 
-    public Object getElement ( String id ) {
+    public Object getInfo ( String id ) {
         return null;
     }
 }
