@@ -8,5 +8,5 @@ public interface Management {
     public void edit(Object object);
     public void delete(String id);
     public List find(String args);
-    public Object getElement(String id);
+    public Object getInfo(String id);
 }

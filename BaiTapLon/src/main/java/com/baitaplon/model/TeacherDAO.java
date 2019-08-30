@@ -1,10 +1,8 @@
 package com.baitaplon.model;
 
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
-public class SinhVienDAO implements Management {
+public class TeacherDAO implements Management {
 
     public List getList () {
         return null;
@@ -26,15 +24,8 @@ public class SinhVienDAO implements Management {
         return null;
     }
 
-    public Object getElement ( String id ) {
+    public Object getInfo ( String id ) {
         return null;
     }
 
-    public  void addScores( String idSV, Map svQuestion ) {
-
-    }
-
-    public Map showAwnser(String id) {
-        return new HashMap();
-    }
 }

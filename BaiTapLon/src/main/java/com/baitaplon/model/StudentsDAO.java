@@ -1,8 +1,11 @@
 package com.baitaplon.model;
 
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
-public class GiaoVienDAO implements Management {
+public class StudentsDAO implements Management {
+
     public List getList () {
         return null;
     }
@@ -23,13 +26,15 @@ public class GiaoVienDAO implements Management {
         return null;
     }
 
-    public Object getElement ( String id ) {
+    public Object getInfo ( String id ) {
         return null;
     }
 
-    public String showSalary( String id) {
-        return "Lương";
+    public  void addScores( String idSV, Map svQuestion ) {
+
     }
 
-
+    public Map showAwnser(String id) {
+        return new HashMap();
+    }
 }
