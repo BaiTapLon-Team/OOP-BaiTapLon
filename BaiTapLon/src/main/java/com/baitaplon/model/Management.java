@@ -1,5 +1,6 @@
 package com.baitaplon.model;
 
+import java.sql.SQLException;
 import java.util.List;
 
 public interface Management {
@@ -8,5 +9,5 @@ public interface Management {
     public void edit(Object object);
     public void delete(String id);
     public List find(String args);
-    public Object getInfo(String id);
+    public Object getInfo(String id) throws SQLException;
 }

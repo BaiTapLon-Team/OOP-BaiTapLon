@@ -1,11 +1,12 @@
 com\baitaplon\model\QuestionDAO.class
-com\baitaplon\objects\ConNguoi.class
-com\baitaplon\objects\GiaoVien.class
+com\baitaplon\controller\StudentController.class
 com\baitaplon\objects\Admin.class
+com\baitaplon\model\StudentsDAO.class
+com\baitaplon\objects\Teacher.class
 com\baitaplon\model\ConnectDatabase.class
-com\baitaplon\objects\SinhVien.class
-com\baitaplon\model\SinhVienDAO.class
+com\baitaplon\model\TeacherDAO.class
+com\baitaplon\objects\Student.class
 com\baitaplon\controller\LoginController.class
 com\baitaplon\controller\AdminController.class
 com\baitaplon\model\Management.class
-com\baitaplon\model\GiaoVienDAO.class
+com\baitaplon\objects\Person.class
