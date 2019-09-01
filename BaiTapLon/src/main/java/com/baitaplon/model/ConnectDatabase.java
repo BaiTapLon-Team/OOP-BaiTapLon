@@ -15,6 +15,7 @@ public class ConnectDatabase {
         try {
             Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
             connection = DriverManager.getConnection(dbURL, userNameSQL, passWordSQL);
+            System.out.println("Connect Successfuly");
         } catch (Exception ex) {
             System.out.println("Connect Fail");
             ex.printStackTrace();
