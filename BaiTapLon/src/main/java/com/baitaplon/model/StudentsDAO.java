@@ -1,10 +1,36 @@
 package com.baitaplon.model;
 
+import com.baitaplon.objects.Student;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
 public class StudentsDAO implements Management {
+    private Connection connection = new ConnectDatabase().getConnection();
+
+    public Student checkLogin(String username, String password) throws SQLException, ClassNotFoundException{
+//        ConnectDatabase connectDatabase = new ConnectDatabase();
+//        Connection connection = connectDatabase.getConnection();
+        String sql = "SELECT * FROM sinhvien WHERE username = ? AND password = ?";
+
+        PreparedStatement preparedStatement = connection.prepareStatement(sql);
+        preparedStatement.setString(1, username);
+        preparedStatement.setString(2, password);
+        ResultSet rs = preparedStatement.executeQuery();
+        Student student = null;
+        if(rs.next()) {
+            student = (Student) getInfo(rs.getString(1));
+            return student;
+        }
+        connection.close();
+        return student;
+    }
 
     public List getList () {
         return null;
@@ -26,8 +52,31 @@ public class StudentsDAO implements Management {
         return null;
     }
 
-    public Object getInfo ( String id ) {
-        return null;
+    public Object getInfo ( String id ) throws SQLException {
+//        ConnectDatabase connectDatabase = new ConnectDatabase();
+//        Connection connection = connectDatabase.getConnection();
+        String sql = "SELECT * FROM sinhvien WHERE masv = ?";
+        PreparedStatement preparedStatement = connection.prepareStatement(sql);
+        preparedStatement.setString(1, id);
+        ResultSet rs = preparedStatement.executeQuery();
+        Student student = null;
+        if(rs.next()) {
+            student = new Student();
+            student.setId(rs.getString(1));
+            student.setUsername(rs.getString(2));
+            student.setPassword(rs.getString(3));
+            student.setName(rs.getString(4));
+            Date date = rs.getDate(5);
+            student.setBirthday(String.valueOf(date));
+            student.setAddress(rs.getString(6));
+            student.setPhone(rs.getString(7));
+            student.setMagv(rs.getString(8));
+            student.setGender(rs.getString(9));
+            student.setEmail(rs.getString(10));
+            connection.close();
+            return student;
+        }
+        return student;
     }
 
     public  void addScores( String idSV, Map svQuestion ) {

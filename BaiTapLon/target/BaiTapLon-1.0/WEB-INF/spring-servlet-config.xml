@@ -17,6 +17,8 @@
         <property name="prefix" value="/WEB-INF/views/"/>
         <property name="suffix" value=".jsp"/>
     </bean>
+
     <mvc:resources mapping="/resources/**" location="/resources/" cache-period="31556926"/>
     <mvc:annotation-driven/>
+
 </beans>

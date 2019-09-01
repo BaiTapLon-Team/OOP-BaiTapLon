@@ -11,6 +11,7 @@
     <title>Title</title>
 </head>
 <body>
-
+    <h1>Login Ok</h1>
+    <h1>${sutudent.username}</h1>
 </body>
 </html>
