@@ -6,6 +6,7 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html>
 <html lang="vi">
 
@@ -15,7 +16,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Admin</title>
     <link rel="stylesheet" href="./font-icon/fontawesome-pro-5.5.0-web/css/all.css">
-    <link rel="stylesheet" href="admin.css">
+    <link type="text/css" rel="stylesheet" href="<c:url value="/resources/css/admin.css" />">
 </head>
 
 <body>
