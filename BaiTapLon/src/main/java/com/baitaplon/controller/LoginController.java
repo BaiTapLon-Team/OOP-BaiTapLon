@@ -59,6 +59,4 @@ public class LoginController {
         httpSession.setAttribute("sutudent", student);
         return "admin";
     }
-
-    //Thử xem nào.
 }
