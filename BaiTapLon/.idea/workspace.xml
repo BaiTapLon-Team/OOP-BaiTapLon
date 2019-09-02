@@ -134,7 +134,6 @@
         <option value="$PROJECT_DIR$/src/main/java/com/baitaplon/model/SinhVienDAO.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/baitaplon/objects/SinhVien.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/baitaplon/objects/Student.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/baitaplon/model/ConnectDatabase.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/baitaplon/objects/Question.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/baitaplon/model/QuestionDAO.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/thitracnghiem.jsp" />
@@ -464,6 +463,8 @@
       <workItem from="1567236689738" duration="11235000" />
       <workItem from="1567315168119" duration="3141000" />
       <workItem from="1567325875064" duration="2529000" />
+      <workItem from="1567354785490" duration="632000" />
+      <workItem from="1567396474045" duration="630000" />
     </task>
     <servers />
   </component>
@@ -717,6 +718,49 @@
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
+=======
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/thitracnghiem.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1720">
+          <caret line="333" column="61" selection-start-line="333" selection-start-column="61" selection-end-line="333" selection-end-column="61" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/baitaplon/controller/AdminController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="110">
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/loginAdmin.jsp">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/loginStudent.jsp">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/loginTeacher.jsp">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/sinhvien.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="10" column="16" selection-start-line="10" selection-start-column="11" selection-end-line="10" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/baitaplon/controller/QuizController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="256">
+          <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+>>>>>>> 0801bef266fa06ac13fa042055aefedb285d7d72
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/login/loginAdmin.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1008">

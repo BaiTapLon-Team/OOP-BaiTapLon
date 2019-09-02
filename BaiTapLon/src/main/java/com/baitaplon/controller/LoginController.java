@@ -55,6 +55,4 @@ public class LoginController {
     public String teacherLogin() {
         return "login/loginTeacher";
     }
-
-    //Thử xem nào.
 }
