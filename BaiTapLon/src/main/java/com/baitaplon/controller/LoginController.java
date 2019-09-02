@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import javax.servlet.http.HttpServletRequest;
@@ -17,34 +18,38 @@ import java.sql.SQLException;
 @Controller
 public class LoginController {
     @RequestMapping(value = {"/student-login"}, method = RequestMethod.GET)
-    public String studentLogin(Model model, @ModelAttribute(name = "error") String error, HttpServletRequest request) {
-        request.setAttribute("error", error);
+    public String studentLogin(@ModelAttribute(name = "error") String error) {
         return "loginStudent";
     }
 
     // Nhận dữ liệu bằng phương thức POST
     @RequestMapping(value = {"/student-login"}, method = RequestMethod.POST)
-    public String studentLogin(@RequestParam(name = "username") String username,
-                               @RequestParam(name = "password") String password, RedirectAttributes redirectAttributes) {
+    public ModelAndView studentLogin(@RequestParam(name = "username") String username,
+                                     @RequestParam(name = "password") String password, RedirectAttributes redirectAttributes, HttpSession httpSession, HttpServletRequest request, Model model) {
+        ModelAndView modelAndView = new ModelAndView();
         if (username == "" || password == "") {
             String error = "Please complete username and password !";
-            redirectAttributes.addFlashAttribute("error", error);
-            return "redirect:/student-login";
+            modelAndView.addObject("error", error);
+            modelAndView.setViewName("redirect:/student-login");
+
         } else {
             StudentsDAO studentsDAO = new StudentsDAO();
             try {
                 Student student = studentsDAO.checkLogin(username, password);
                 if (student != null) {
-                    redirectAttributes.addFlashAttribute("sinhvien", student);
-                    return "redirect:/ok";
+                    request.getSession().setAttribute("sinhvien", student);
+                    modelAndView.setViewName("redirect:/ok");
+                }
+                else {
+                    String error = "Username or password invalid !!!";
+                    modelAndView.addObject("error", error);
+                    modelAndView.setViewName("redirect:/student-login");
                 }
             } catch (Exception e) {
                 e.printStackTrace();
             }
         }
-        String error = "Username or password invalid !!!";
-        redirectAttributes.addFlashAttribute("error", error);
-        return "redirect:/student-login";
+        return  modelAndView;
     }
 
     @RequestMapping(value = {"/teacher-login"})
@@ -53,10 +58,7 @@ public class LoginController {
     }
 
     @RequestMapping("/ok")
-    public String loginOk(@ModelAttribute(name = "sinhvien") Student student, Model model, HttpServletRequest request) {
-//        model.addAttribute("sutudent", student);
-        HttpSession httpSession = request.getSession();
-        httpSession.setAttribute("sutudent", student);
+    public String loginOk() {
         return "admin";
     }
 

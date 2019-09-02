@@ -39,7 +39,7 @@
         </div>
         <div class="content">
             <div class="action">
-                <a href="" class="add-content">Thêm mới</a>
+                <a href="#" class="add-content">Thêm mới</a>
                 <form action="#" class="search-from">
                     <input type="search" name="search" placeholder="Search records">
                     <input type="submit" name="submit" value="Search">
@@ -54,9 +54,9 @@
                     <th scope="col">Action</th>
                 </tr>
                 <tr>
-                    <td>Hello</td>
-                    <td>Hello</td>
-                    <td>Hello</td>
+                    <td>${sinhvien.username}</td>
+                    <td>${sinhvien.password}</td>
+                    <td>${sinhvien.name}</td>
                     <td>Hello</td>
                     <td><i class="fal fa-user-edit"></i> <i class="fal fa-user-times"></i></td>
                 </tr>

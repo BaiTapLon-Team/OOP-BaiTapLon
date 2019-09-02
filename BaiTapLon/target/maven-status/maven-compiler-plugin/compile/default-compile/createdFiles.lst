@@ -1,6 +1,9 @@
-com\baitaplon\model\QuestionDAO.class
 com\baitaplon\controller\StudentController.class
 com\baitaplon\objects\Admin.class
+com\baitaplon\model\Management.class
+com\baitaplon\objects\Question.class
+com\baitaplon\model\QuestionDAO.class
+com\baitaplon\controller\QuizController.class
 com\baitaplon\model\StudentsDAO.class
 com\baitaplon\objects\Teacher.class
 com\baitaplon\model\ConnectDatabase.class
@@ -8,5 +11,4 @@ com\baitaplon\model\TeacherDAO.class
 com\baitaplon\objects\Student.class
 com\baitaplon\controller\LoginController.class
 com\baitaplon\controller\AdminController.class
-com\baitaplon\model\Management.class
 com\baitaplon\objects\Person.class
