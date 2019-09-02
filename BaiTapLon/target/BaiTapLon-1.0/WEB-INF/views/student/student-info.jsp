@@ -26,7 +26,7 @@
         <div class="info"><i class="fal fa-user-circle"></i> ${ student.name } </div>
         <div class="nav">
             <a href="#">Thông tin</a>
-            <a href="#">Câu hỏi</a>
+            <a href="${pageContext.request.contextPath}/sinhvien/thi-trac-nghiem">Câu hỏi</a>
             <a href="#">Bảng điểm</a>
         </div>
     </div>

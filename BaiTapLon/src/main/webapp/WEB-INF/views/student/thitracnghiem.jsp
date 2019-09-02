@@ -23,7 +23,7 @@
             font-family: Comfortaa-Medium;
             font-family: Comfortaa-Regular;
             font-family: Comfortaa[wght]; */
-            src: url(../../resources/font/Comfortaa-Bold.ttf);
+            src: url(../../../resources/font/Comfortaa-Bold.ttf);
             /* src: url(./font/Comfortaa-Light.ttf);
             src: url(./font/Comfortaa-Medium.ttf);
             src: url(./font/Comfortaa-Regular.ttf);
@@ -305,7 +305,7 @@
 <div class="wrappe-me">
     <div class="sidebar-me">
         <div class="logo"><a href="#">Sinh Viên</a></div>
-        <div class="info"><i class="fal fa-user-circle"></i> Name Student *</div>
+        <div class="info"><i class="fal fa-user-circle"></i> ${student.name} </div>
         <div class="nav">
             <a href="#">Thông tin</a>
             <a href="#">Giáo viên</a>

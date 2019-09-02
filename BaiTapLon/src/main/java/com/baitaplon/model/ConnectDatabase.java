@@ -5,13 +5,13 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 
 public class ConnectDatabase {
-//    private String dbURL = "jdbc:sqlserver://localhost:1433;" + "databaseName=BAITAPLON;" + "authenticationScheme=JavaKerberos";
-//    private String userNameSQL = "sa";
-//    private String passWordSQL = "Vanhajvst123";
-
-    private String dbURL = "jdbc:sqlserver://DUY_PHUC:1433;databaseName=BAITAPLON";
+    private String dbURL = "jdbc:sqlserver://localhost:1433;" + "databaseName=BAITAPLON;" + "authenticationScheme=JavaKerberos";
     private String userNameSQL = "sa";
-    private String passWordSQL = "123";
+    private String passWordSQL = "Vanhajvst123";
+
+//    private String dbURL = "jdbc:sqlserver://DUY_PHUC:1433;databaseName=BAITAPLON";
+//    private String userNameSQL = "sa";
+//    private String passWordSQL = "123";
 
     public Connection getConnection () {
         Connection connection = null;

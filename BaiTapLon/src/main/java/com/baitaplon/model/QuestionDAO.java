@@ -8,6 +8,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 
 public class QuestionDAO implements Management {
     //Khai báo các biến cần thiết để thao tác vs data
@@ -130,6 +131,36 @@ public class QuestionDAO implements Management {
             System.out.println("Get Question Fail");
             ex.printStackTrace();
             return questionInfo;
+        }
+    }
+
+    //Thêm vào bảng sv_question 1 câu trả lời của 1 sinh viên
+    public void addSV_Question( String studentID, int questionID, String answer ) {
+        String sqlRequest = "INSERT INTO dbo.sv_question\n" +
+                "(\n" +
+                "    masv,\n" +
+                "    questionid,\n" +
+                "    answer\n" +
+                ")\n" +
+                "VALUES\n" +
+                "(   '"+studentID+"', -- masv - varchar(50)\n" +
+                "    "+questionID+",  -- questionid - int\n" +
+                "    N'"+answer+"' -- answer - nvarchar(100)\n" +
+                ")";
+        try {
+            preparedStatement = connection.prepareStatement(sqlRequest);
+            preparedStatement.executeUpdate();
+            System.out.println("insert sv_question successfuly");
+        }catch (Exception ex) {
+            System.out.println("insert sv_question Fail");
+            ex.printStackTrace();
+        }
+    }
+
+    //Thêm vào bảng sv_question 50 câu trả lời của 1 sinh viên
+    public void addSV_Questions( String studentID, Map<Integer, String> answers) {
+        for(Integer key : answers.keySet()) {
+            addSV_Question(studentID, key, answers.get(key));
         }
     }
 }

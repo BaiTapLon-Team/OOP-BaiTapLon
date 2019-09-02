@@ -1,6 +1,7 @@
 package com.baitaplon.controller;
 
 import com.baitaplon.model.QuestionDAO;
+import com.baitaplon.objects.Student;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -15,12 +16,12 @@ import java.util.Map;
 @Controller
 public class QuizController {
 
-    @RequestMapping(value = {"/thi-trac-nghiem"})
-    public String quizStudent( Model model ) {
+    @RequestMapping(value = {"/sinhvien/thi-trac-nghiem"})
+    public String quizStudent( Model model, HttpServletRequest request ) {
         QuestionDAO questionDAO = new QuestionDAO();
         List questionList = questionDAO.getList();
         model.addAttribute("questionList", questionList);
-        return "thitracnghiem";
+        return "student/thitracnghiem";
     }
 
     @RequestMapping(value = "/ket-qua-thi", method = RequestMethod.POST)
@@ -33,8 +34,11 @@ public class QuizController {
             mapStudentAnswer.put(questionID, sAnswer);
             i++;
         }
-        System.out.println(mapStudentAnswer);
-        return "sinhvien";
+        Student student = (Student) request.getSession().getAttribute("student");
+        String StudentID = student.getId();
+        QuestionDAO questionDAO = new QuestionDAO();
+        questionDAO.addSV_Questions(student.getId(), mapStudentAnswer);
+        return "student-info";
     }
 
 }
