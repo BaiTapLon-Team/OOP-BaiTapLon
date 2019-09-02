@@ -7,6 +7,7 @@
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <!DOCTYPE html>
 <html lang="vi">
 
@@ -38,12 +39,48 @@
         <div class="content">
             <div class="view-info">
                 <h1 id="titel-info">Thông tin cá nhân sinh viên</h1>
-                <form action="#">
-                    <label for="name">Họ và tên</label>
-                    <input type="text" id="name" value="${ student.name }">
-                    <label for="address">Địa chỉ</label>
-                    <input type="text" id="address" value="${ student.address }">
-                </form>
+                <c:url value="/student/info-edit" var="url"/>
+                <form:form action="${url}" id="box-info" modelAttribute="student" method="post">
+                    <div class="info">
+                        <label for="masv">Mã sinh viên</label>
+                        <form:input type="text" id="masv" value="${ student.id.trim() }"  path="id" disabled="true"/>
+                    </div>
+                    <div class="info">
+                        <label for="name">Họ và tên</label>
+                        <form:input type="text" id="name" value="${ student.name.trim() }" path="name"/>
+                    </div>
+                    <div class="info">
+                        <label for="username">Username</label>
+                        <form:input type="text" id="username" value="${ student.username.trim() }" disabled="true" path="username"/>
+                    </div>
+                    <div class="info">
+                        <label for="birthday">Ngày sinh</label>
+                        <form:input type="text" id="birthday" value="${ student.birthday.trim() }" path="birthday" />
+                    </div>
+                    <div class="info">
+                        <label for="gender">Giới tính</label>
+                        <form:input type="text" id="gender" value="${ student.gender.trim() }" path="gender"/>
+                    </div>
+                    <div class="info">
+                        <label for="address">Địa chỉ</label>
+                        <form:input type="text" id="address" value=" ${ student.address.trim() }" path="address"/>
+                    </div>
+                    <div class="info">
+                        <label for="phone">Số điện thoại</label>
+                        <form:input type="text" id="phone" value="${ student.phone.trim() }" path="phone"/>
+                    </div>
+                    <div class="info">
+                        <label for="email">Email</label>
+                        <form:input type="text" id="email" value="${ student.email.trim() }" path="email"/>
+                    </div>
+                    <div class="info">
+                        <label for="magv">Giáo viên quản lý</label>
+                        <form:input type="text" id="magv" path="magv"  disabled="true" value="${ student.magv.trim() }" />
+                    </div>
+                    <div class="save-info">
+                        <input type="submit" value="Lưu thay đổi">
+                    </div>
+                </form:form>
             </div>
         </div>
         <div class="footer">© 2019 codesieungu, made with love for a better web</div>

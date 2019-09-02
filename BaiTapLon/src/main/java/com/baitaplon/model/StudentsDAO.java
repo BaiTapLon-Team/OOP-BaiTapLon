@@ -15,8 +15,6 @@ public class StudentsDAO implements Management {
     private Connection connection = new ConnectDatabase().getConnection();
 
     public Student checkLogin(String username, String password) throws SQLException, ClassNotFoundException{
-//        ConnectDatabase connectDatabase = new ConnectDatabase();
-//        Connection connection = connectDatabase.getConnection();
         String sql = "SELECT * FROM sinhvien WHERE username = ? AND password = ?";
 
         PreparedStatement preparedStatement = connection.prepareStatement(sql);
@@ -40,8 +38,19 @@ public class StudentsDAO implements Management {
 
     }
 
-    public void edit ( Object object ) {
-
+    public void edit ( Object object ) throws SQLException {
+        Student student = (Student) object;
+        String sql = "UPDATE sinhvien SET name = ?, birthday = ?, address = ?, phone = ?, gender = ?, email = ? WHERE masv = ?";
+        PreparedStatement preparedStatement = connection.prepareStatement(sql);
+        preparedStatement.setString(1, student.getName());
+        preparedStatement.setString(2, student.getBirthday());
+        preparedStatement.setString(3, student.getAddress());
+        preparedStatement.setString(4, student.getPhone());
+        preparedStatement.setString(5, student.getGender());
+        preparedStatement.setString(6, student.getEmail());
+        preparedStatement.setString(7, student.getId());
+        preparedStatement.executeUpdate();
+        connection.close();
     }
 
     public void delete ( String id ) {
@@ -53,8 +62,6 @@ public class StudentsDAO implements Management {
     }
 
     public Object getInfo ( String id ) throws SQLException {
-//        ConnectDatabase connectDatabase = new ConnectDatabase();
-//        Connection connection = connectDatabase.getConnection();
         String sql = "SELECT * FROM sinhvien WHERE masv = ?";
         PreparedStatement preparedStatement = connection.prepareStatement(sql);
         preparedStatement.setString(1, id);

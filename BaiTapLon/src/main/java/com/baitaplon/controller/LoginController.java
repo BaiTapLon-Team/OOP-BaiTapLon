@@ -37,7 +37,7 @@ public class LoginController {
                 Student student = studentsDAO.checkLogin(username, password);
                 if (student != null) {
                     request.getSession().setAttribute("student", student);
-                    modelAndView.setViewName("redirect:/sutudent/info");
+                    modelAndView.setViewName("redirect:/student/info");
                 }
                 else {
                     String error = "Username or password invalid !!!";
