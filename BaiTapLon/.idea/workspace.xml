@@ -2,29 +2,17 @@
 <project version="4">
   <component name="ArtifactsWorkspaceSettings">
     <artifacts-to-build>
-      <artifact name="BaiTapLon:war exploded" />
+      <artifact name="BaiTapLon:war" />
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2d64be03-9f2f-4904-a51f-b47d50a026c9" name="Default Changelist" comment="">
+    <list default="true" id="8516b04a-ca07-4888-90e8-0c5104cb83d1" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/baitaplon/controller/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/baitaplon/controller/LoginController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/baitaplon/controller/StudentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/baitaplon/controller/StudentController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/baitaplon/model/Management.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/baitaplon/model/Management.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/baitaplon/model/StudentsDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/baitaplon/model/StudentsDAO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/student/student-info.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/student/student-info.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/css/student-info.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/resources/css/student-info.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/BaiTapLon-1.0.war" beforeDir="false" afterPath="$PROJECT_DIR$/target/BaiTapLon-1.0.war" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/BaiTapLon-1.0/WEB-INF/classes/com/baitaplon/controller/LoginController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/BaiTapLon-1.0/WEB-INF/classes/com/baitaplon/controller/LoginController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/BaiTapLon-1.0/WEB-INF/classes/com/baitaplon/controller/StudentController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/BaiTapLon-1.0/WEB-INF/classes/com/baitaplon/controller/StudentController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/BaiTapLon-1.0/WEB-INF/classes/com/baitaplon/model/Management.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/BaiTapLon-1.0/WEB-INF/classes/com/baitaplon/model/Management.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/BaiTapLon-1.0/WEB-INF/classes/com/baitaplon/model/StudentsDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/BaiTapLon-1.0/WEB-INF/classes/com/baitaplon/model/StudentsDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/BaiTapLon-1.0/WEB-INF/classes/com/baitaplon/model/ConnectDatabase.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/BaiTapLon-1.0/WEB-INF/classes/com/baitaplon/model/ConnectDatabase.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/BaiTapLon-1.0/WEB-INF/views/student/student-info.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/BaiTapLon-1.0/WEB-INF/views/student/student-info.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/BaiTapLon-1.0/resources/css/student-info.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/BaiTapLon-1.0/resources/css/student-info.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/baitaplon/controller/LoginController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/baitaplon/controller/LoginController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/baitaplon/controller/StudentController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/baitaplon/controller/StudentController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/baitaplon/model/Management.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/baitaplon/model/Management.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/baitaplon/model/StudentsDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/baitaplon/model/StudentsDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/baitaplon/model/ConnectDatabase.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/baitaplon/model/ConnectDatabase.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -35,80 +23,36 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="DefaultGradleProjectSettings">
-    <option name="isMigrated" value="true" />
-  </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+    <leaf>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/baitaplon/controller/LoginController.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/baitaplon/controller/AdminController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="410">
-              <caret line="37" column="38" selection-start-line="37" selection-start-column="38" selection-end-line="37" selection-end-column="38" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#899#900#0" expanded="true" />
-                <element signature="e#936#937#0" expanded="true" />
-                <element signature="e#2471#2472#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="210">
+              <caret line="12" selection-start-line="12" selection-end-line="12" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/student/student-info.jsp">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/baitaplon/controller/StudentController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="448">
-              <caret line="49" column="97" selection-start-line="49" selection-start-column="97" selection-end-line="49" selection-end-column="97" />
+            <state relative-caret-position="376">
+              <caret line="34" column="13" selection-start-line="34" selection-start-column="13" selection-end-line="34" selection-end-column="13" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/baitaplon/controller/StudentController.java">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/student/student-info.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="200">
-              <caret line="24" column="17" lean-forward="true" selection-start-line="24" selection-start-column="17" selection-end-line="24" selection-end-column="17" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/baitaplon/model/StudentsDAO.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="578">
-              <caret line="85" column="22" selection-start-line="85" selection-start-column="15" selection-end-line="85" selection-end-column="22" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#1422#1423#0" expanded="true" />
-                <element signature="e#1449#1450#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/giaovien.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="273">
-              <caret line="13" selection-start-line="13" selection-end-line="13" />
+            <state relative-caret-position="448">
+              <caret line="30" column="37" selection-start-line="30" selection-start-column="37" selection-end-line="30" selection-end-column="37" />
             </state>
           </provider>
         </entry>
       </file>
     </leaf>
-  </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="spring-beans.schema" />
-        <option value="Class" />
-        <option value="Jsp File" />
-      </list>
-    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
@@ -116,35 +60,7 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/spring-servlet-config.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/com/baitaplon/controller/AdminController.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/index.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/resources/css/login.css" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/sinhvien.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/giaovien.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/login.jsp" />
-        <option value="$PROJECT_DIR$/src/main/java/com/baitaplon/model/Managerment.java" />
-        <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/com/baitaplon/objects/ConNguoi.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/baitaplon/objects/Admin.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/baitaplon/model/Management.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/baitaplon/objects/GiaoVien.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/baitaplon/model/GiaoVienDAO.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/baitaplon/model/SinhVienDAO.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/baitaplon/objects/SinhVien.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/baitaplon/objects/Student.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/baitaplon/objects/Question.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/baitaplon/model/QuestionDAO.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/thitracnghiem.jsp" />
-        <option value="$PROJECT_DIR$/src/main/java/com/baitaplon/controller/QuizController.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/admin.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/loginStudent.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/resources/css/student-info.css" />
-        <option value="$PROJECT_DIR$/src/main/java/com/baitaplon/controller/LoginController.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/student/student-info.jsp" />
-        <option value="$PROJECT_DIR$/src/main/java/com/baitaplon/model/StudentsDAO.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/baitaplon/controller/StudentController.java" />
       </list>
     </option>
   </component>
@@ -154,13 +70,6 @@
     <option name="FILTER_INFO" value="true" />
     <option name="FILTER_DEBUG" value="true" />
     <option name="CUSTOM_FILTER" />
-  </component>
-  <component name="MavenImportPreferences">
-    <option name="importingSettings">
-      <MavenImportingSettings>
-        <option name="importAutomatically" value="true" />
-      </MavenImportingSettings>
-    </option>
   </component>
   <component name="MavenProjectNavigator">
     <treeState>
@@ -178,17 +87,8 @@
       <select />
     </treeState>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="55" />
-    <option name="width" value="1085" />
-    <option name="height" value="1087" />
-  </component>
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
-    <ConfirmationsSetting value="1" id="Add" />
-  </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
-      <autoscrollFromSource ProjectPane="true" />
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
@@ -198,6 +98,11 @@
             <path>
               <item name="BaiTapLon" type="b2602c69:ProjectViewProjectNode" />
               <item name="BaiTapLon" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="BaiTapLon" type="b2602c69:ProjectViewProjectNode" />
+              <item name="BaiTapLon" type="462c0819:PsiDirectoryNode" />
+              <item name=".idea" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="BaiTapLon" type="b2602c69:ProjectViewProjectNode" />
@@ -233,24 +138,6 @@
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="baitaplon" type="462c0819:PsiDirectoryNode" />
               <item name="controller" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="BaiTapLon" type="b2602c69:ProjectViewProjectNode" />
-              <item name="BaiTapLon" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="baitaplon" type="462c0819:PsiDirectoryNode" />
-              <item name="model" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="BaiTapLon" type="b2602c69:ProjectViewProjectNode" />
-              <item name="BaiTapLon" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="baitaplon" type="462c0819:PsiDirectoryNode" />
-              <item name="objects" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="BaiTapLon" type="b2602c69:ProjectViewProjectNode" />
@@ -294,41 +181,13 @@
               <item name="views" type="462c0819:PsiDirectoryNode" />
               <item name="student" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="BaiTapLon" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
-  </component>
-  <component name="PropertiesComponent">
-    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1567263326144" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/webapp/resources/css" />
-    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
-    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="project.structure.last.edited" value="Libraries" />
-    <property name="project.structure.proportion" value="0.15" />
-    <property name="project.structure.side.proportion" value="0.33333334" />
-    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
-  </component>
-  <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\Full code\JavaFull\JAVA-WEB-Intellij\BaiTapLon\src\main\webapp\WEB-INF\views\login" />
-      <recent name="D:\Full code\JavaFull\JAVA-WEB-Intellij\BaiTapLon\src\main\webapp\resources" />
-      <recent name="D:\Full code\JavaFull\JAVA-WEB-Intellij\BaiTapLon\src\main" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\Full code\JavaFull\JAVA-WEB-Intellij\BaiTapLon\src\main\webapp\resources\css" />
-      <recent name="D:\Full code\JavaFull\JAVA-WEB-Intellij\BaiTapLon\src\main\webapp\resources" />
-    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -342,34 +201,18 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Tomcat Server.Tomcat9">
-    <configuration name="ConnectDatabase" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.baitaplon.model.ConnectDatabase" />
-      <module name="BaiTapLon" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.baitaplon.model.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Tomcat9" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.222" ALTERNATIVE_JRE_ENABLED="false">
-      <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8081/BaiTapLon/" />
-      <option name="UPDATE_ON_FRAME_DEACTIVATION" value="true" />
-      <option name="UPDATE_CLASSES_ON_FRAME_DEACTIVATION" value="true" />
+  <component name="RunManager">
+    <configuration name="Tomcat 9.0.22" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.22" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
+      <option name="UPDATING_POLICY" value="restart-server" />
       <deployment>
-        <artifact name="BaiTapLon:war exploded">
+        <artifact name="BaiTapLon:war">
           <settings>
-            <option name="CONTEXT_PATH" value="/BaiTapLon" />
+            <option name="CONTEXT_PATH" value="/BaiTapLon_war" />
           </settings>
         </artifact>
       </deployment>
       <server-settings>
-        <option name="BASE_DIRECTORY_NAME" value="Unnamed_BaiTapLon" />
-        <option name="HTTP_PORT" value="8081" />
+        <option name="BASE_DIRECTORY_NAME" value="Unnamed_BaiTapLon_2" />
       </server-settings>
       <predefined_log_file enabled="true" id="Tomcat" />
       <predefined_log_file enabled="true" id="Tomcat Catalina" />
@@ -377,7 +220,7 @@
       <predefined_log_file id="Tomcat Host Manager" />
       <predefined_log_file id="Tomcat Localhost Access" />
       <RunnerSettings RunnerId="Debug">
-        <option name="DEBUG_PORT" value="63292" />
+        <option name="DEBUG_PORT" value="61187" />
       </RunnerSettings>
       <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
         <option name="USE_ENV_VARIABLES" value="true" />
@@ -427,529 +270,98 @@
       <method v="2">
         <option name="Make" enabled="true" />
         <option name="BuildArtifacts" enabled="true">
-          <artifact name="BaiTapLon:war exploded" />
+          <artifact name="BaiTapLon:war" />
         </option>
       </method>
     </configuration>
-    <list>
-      <item itemvalue="Application.ConnectDatabase" />
-      <item itemvalue="Tomcat Server.Tomcat9" />
-    </list>
-    <recent_temporary>
-      <list>
-        <item itemvalue="Application.ConnectDatabase" />
-      </list>
-    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="2d64be03-9f2f-4904-a51f-b47d50a026c9" name="Default Changelist" comment="" />
-      <created>1566801138334</created>
+      <changelist id="8516b04a-ca07-4888-90e8-0c5104cb83d1" name="Default Changelist" comment="" />
+      <created>1567419968361</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1566801138334</updated>
-      <workItem from="1566801145223" duration="3107000" />
-      <workItem from="1566890665227" duration="788000" />
-      <workItem from="1566915995486" duration="2650000" />
-      <workItem from="1566920651797" duration="576000" />
-      <workItem from="1566923058341" duration="1524000" />
-      <workItem from="1566974941389" duration="642000" />
-      <workItem from="1567042785795" duration="6892000" />
-      <workItem from="1567128672775" duration="7247000" />
-      <workItem from="1567155505351" duration="6754000" />
-      <workItem from="1567236689738" duration="11235000" />
-      <workItem from="1567315168119" duration="3141000" />
-      <workItem from="1567325875064" duration="2529000" />
-      <workItem from="1567354785490" duration="632000" />
-      <workItem from="1567396474045" duration="630000" />
+      <updated>1567419968361</updated>
+      <workItem from="1567419969970" duration="1119000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="80748000" />
+    <option name="totallyTimeSpent" value="1119000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="54" y="-8" width="1874" height="1096" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.16868798" />
+      <window_info id="Designer" />
+      <window_info id="Image Layers" />
+      <window_info id="UI Designer" />
+      <window_info id="Favorites" side_tool="true" />
+      <window_info id="Capture Tool" />
+      <window_info id="Web" side_tool="true" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.17144433" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="Designer" order="2" />
-      <window_info id="Image Layers" order="3" />
-      <window_info id="Capture Tool" order="4" />
-      <window_info id="UI Designer" order="5" />
-      <window_info id="Favorites" order="6" side_tool="true" />
-      <window_info id="Web" order="7" side_tool="true" />
+      <window_info anchor="bottom" id="Application Servers" weight="0.32917964" />
+      <window_info anchor="bottom" id="Spring" />
+      <window_info anchor="bottom" id="Terminal" />
+      <window_info anchor="bottom" id="Event Log" side_tool="true" />
+      <window_info anchor="bottom" id="Messages" weight="0.28141224" />
+      <window_info anchor="bottom" id="Java Enterprise" />
+      <window_info anchor="bottom" id="Database Changes" />
+      <window_info anchor="bottom" id="Version Control" />
+      <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.24195223" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.28037384" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Application Servers" order="7" weight="0.20664589" />
-      <window_info anchor="bottom" id="Spring" order="8" />
-      <window_info anchor="bottom" id="Terminal" order="9" />
-      <window_info anchor="bottom" id="Docker" order="10" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
-      <window_info anchor="bottom" id="Messages" order="12" weight="0.21391486" />
-      <window_info anchor="bottom" id="Java Enterprise" order="13" />
-      <window_info anchor="bottom" id="Database Changes" order="14" />
-      <window_info anchor="bottom" id="Version Control" order="15" />
+      <window_info anchor="right" id="Maven" weight="0.3296582" />
+      <window_info anchor="right" id="Palette" />
+      <window_info anchor="right" id="Capture Analysis" />
+      <window_info anchor="right" id="Database" />
+      <window_info anchor="right" id="Palette&#9;" />
+      <window_info anchor="right" id="Theme Preview" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info active="true" anchor="right" id="Maven" order="3" visible="true" weight="0.32910696" />
-      <window_info anchor="right" id="Palette" order="4" />
-      <window_info anchor="right" id="Capture Analysis" order="5" />
-      <window_info anchor="right" id="Database" order="6" />
-      <window_info anchor="right" id="Palette&#9;" order="7" />
-      <window_info anchor="right" id="Theme Preview" order="8" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/css/login.css" />
-    <entry file="file://$PROJECT_DIR$/BaiTapLon.iml" />
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/font/OFL.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-126">
-          <caret line="18" column="21" selection-start-line="18" selection-start-column="21" selection-end-line="18" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/image/favicon.ico">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/image/bg-01.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/spring-servlet-config.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="44">
-          <caret line="2" column="25" selection-start-line="2" selection-start-column="25" selection-end-line="2" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="540">
-          <caret line="57" column="30" selection-start-line="57" selection-start-column="30" selection-end-line="57" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/baitaplon/objects/Admin.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="12" column="34" selection-start-line="12" selection-start-column="25" selection-end-line="12" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/baitaplon/objects/Person.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-504">
-          <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
-          <folding>
-            <element signature="e#816#817#0" expanded="true" />
-            <element signature="e#841#842#0" expanded="true" />
-            <element signature="e#880#881#0" expanded="true" />
-            <element signature="e#908#909#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/baitaplon/objects/Teacher.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="672">
-          <caret line="32" lean-forward="true" selection-start-line="32" selection-end-line="32" />
-          <folding>
-            <element signature="e#160#161#0" expanded="true" />
-            <element signature="e#183#184#0" expanded="true" />
-            <element signature="e#697#698#0" expanded="true" />
-            <element signature="e#734#735#0" expanded="true" />
-            <element signature="e#794#795#0" expanded="true" />
-            <element signature="e#846#847#0" expanded="true" />
-            <element signature="e#890#891#0" expanded="true" />
-            <element signature="e#931#932#0" expanded="true" />
-            <element signature="e#998#999#0" expanded="true" />
-            <element signature="e#1058#1059#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/baitaplon/objects/Student.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
-          <folding>
-            <element signature="e#122#123#0" expanded="true" />
-            <element signature="e#145#146#0" expanded="true" />
-            <element signature="e#490#491#0" expanded="true" />
-            <element signature="e#517#518#0" expanded="true" />
-            <element signature="e#560#561#0" expanded="true" />
-            <element signature="e#592#593#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/baitaplon/model/Management.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="231">
-          <caret line="11" column="1" lean-forward="true" selection-start-line="11" selection-start-column="1" selection-end-line="11" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/baitaplon/model/TeacherDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="19" selection-start-line="19" selection-end-line="19" />
-          <folding>
-            <element signature="e#341#342#0" expanded="true" />
-            <element signature="e#368#369#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="352">
-          <caret line="16" column="15" selection-start-line="16" selection-start-column="15" selection-end-line="16" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/baitaplon/controller/AdminController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="110">
-          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/index.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="8" column="30" selection-start-line="8" selection-start-column="30" selection-end-line="8" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/baitaplon/model/ConnectDatabase.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="22" column="41" selection-start-line="22" selection-start-column="41" selection-end-line="22" selection-end-column="41" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/baitaplon/model/QuestionDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2184">
-          <caret line="106" column="38" selection-start-line="106" selection-start-column="38" selection-end-line="106" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/5.1.5.RELEASE/spring-web-5.1.5.RELEASE.jar!/org/springframework/web/method/support/InvocableHandlerMethod.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="179">
-          <caret line="101" selection-start-line="101" selection-end-line="101" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/baitaplon/objects/Question.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="9" column="27" selection-start-line="9" selection-start-column="27" selection-end-line="9" selection-end-column="27" />
-          <folding>
-            <element signature="e#713#714#0" expanded="true" />
-            <element signature="e#746#747#0" expanded="true" />
-            <element signature="e#798#799#0" expanded="true" />
-            <element signature="e#842#843#0" expanded="true" />
-            <element signature="e#877#878#0" expanded="true" />
-            <element signature="e#907#908#0" expanded="true" />
-            <element signature="e#956#957#0" expanded="true" />
-            <element signature="e#994#995#0" expanded="true" />
-            <element signature="e#1029#1030#0" expanded="true" />
-            <element signature="e#1059#1060#0" expanded="true" />
-            <element signature="e#1108#1109#0" expanded="true" />
-            <element signature="e#1146#1147#0" expanded="true" />
-            <element signature="e#1181#1182#0" expanded="true" />
-            <element signature="e#1211#1212#0" expanded="true" />
-            <element signature="e#1260#1261#0" expanded="true" />
-            <element signature="e#1298#1299#0" expanded="true" />
-            <element signature="e#1333#1334#0" expanded="true" />
-            <element signature="e#1363#1364#0" expanded="true" />
-            <element signature="e#1412#1413#0" expanded="true" />
-            <element signature="e#1450#1451#0" expanded="true" />
-            <element signature="e#1485#1486#0" expanded="true" />
-            <element signature="e#1515#1516#0" expanded="true" />
-            <element signature="e#1564#1565#0" expanded="true" />
-            <element signature="e#1602#1603#0" expanded="true" />
-            <element signature="e#1637#1638#0" expanded="true" />
-            <element signature="e#1667#1668#0" expanded="true" />
-            <element signature="e#1716#1717#0" expanded="true" />
-            <element signature="e#1754#1755#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/login/loginStudent.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="478">
-          <caret line="29" column="59" selection-start-line="29" selection-start-column="59" selection-end-line="29" selection-end-column="59" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/css/admin.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="5733">
-          <caret line="273" column="34" selection-start-line="273" selection-start-column="34" selection-end-line="273" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/sinhvien.jsp">
-      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
-          <caret line="10" column="16" selection-start-line="10" selection-start-column="11" selection-end-line="10" selection-end-column="16" />
+          <caret line="12" selection-start-line="12" selection-end-line="12" />
         </state>
       </provider>
     </entry>
-<<<<<<< HEAD
-=======
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/thitracnghiem.jsp">
+    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1720">
-          <caret line="333" column="61" selection-start-line="333" selection-start-column="61" selection-end-line="333" selection-end-column="61" />
+        <state relative-caret-position="2478">
+          <caret line="952" column="10" lean-forward="true" selection-start-line="952" selection-start-column="10" selection-end-line="952" selection-end-column="10" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/baitaplon/controller/AdminController.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/baitaplon/controller/StudentController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="110">
-          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/loginAdmin.jsp">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/loginStudent.jsp">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/loginTeacher.jsp">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/sinhvien.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="10" column="16" selection-start-line="10" selection-start-column="11" selection-end-line="10" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/baitaplon/controller/QuizController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="256">
-          <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
->>>>>>> 0801bef266fa06ac13fa042055aefedb285d7d72
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/login/loginAdmin.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1008">
-          <caret line="48" column="36" selection-start-line="48" selection-start-column="36" selection-end-line="48" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/login.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="382">
-          <caret line="189" column="39" selection-start-line="189" selection-start-column="39" selection-end-line="189" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/admin.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="324">
-          <caret line="18" column="4" selection-start-line="18" selection-start-column="4" selection-end-line="18" selection-end-column="93" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/login/loginTeacher.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="8" selection-start-line="8" selection-end-line="8" selection-end-column="64" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/giaovien.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="273">
-          <caret line="13" selection-start-line="13" selection-end-line="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/baitaplon/controller/QuizController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="684">
-          <caret line="35" column="45" selection-start-line="35" selection-start-column="45" selection-end-line="35" selection-end-column="45" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/css/student-info.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="42">
-          <caret line="2" column="15" selection-start-line="2" selection-start-column="15" selection-end-line="2" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/thitracnghiem.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="333" column="61" selection-start-line="333" selection-start-column="61" selection-end-line="333" selection-end-column="61" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/baitaplon/controller/LoginController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="410">
-          <caret line="37" column="38" selection-start-line="37" selection-start-column="38" selection-end-line="37" selection-end-column="38" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#899#900#0" expanded="true" />
-            <element signature="e#936#937#0" expanded="true" />
-            <element signature="e#2471#2472#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="376">
+          <caret line="34" column="13" selection-start-line="34" selection-start-column="13" selection-end-line="34" selection-end-column="13" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/student/student-info.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="448">
-          <caret line="49" column="97" selection-start-line="49" selection-start-column="97" selection-end-line="49" selection-end-column="97" />
+          <caret line="30" column="37" selection-start-line="30" selection-start-column="37" selection-end-line="30" selection-end-column="37" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/baitaplon/model/StudentsDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="578">
-          <caret line="85" column="22" selection-start-line="85" selection-start-column="15" selection-end-line="85" selection-end-column="22" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1422#1423#0" expanded="true" />
-            <element signature="e#1449#1450#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/baitaplon/controller/StudentController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="24" column="17" lean-forward="true" selection-start-line="24" selection-start-column="17" selection-end-line="24" selection-end-column="17" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-  </component>
-  <component name="masterDetails">
-    <states>
-      <state key="ArtifactsStructureConfigurable.UI">
-        <settings>
-          <artifact-editor />
-          <last-edited>BaiTapLon:war exploded</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.33333334" />
-                <option value="0.5" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="FacetStructureConfigurable.UI">
-        <settings>
-          <last-edited>Spring</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.33333334" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="GlobalLibrariesConfigurable.UI">
-        <settings>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.33333334" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="JdkListConfigurable.UI">
-        <settings>
-          <last-edited>1.8</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.33333334" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="ModuleStructureConfigurable.UI">
-        <settings>
-          <last-edited>Web|BaiTapLon</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.33333334" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="ProjectJDKs.UI">
-        <settings>
-          <last-edited>1.8</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.31111112" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="ProjectLibrariesConfigurable.UI">
-        <settings>
-          <last-edited>Maven: com.microsoft.sqlserver:mssql-jdbc:7.2.2.jre8</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.33333334" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-    </states>
   </component>
 </project>
