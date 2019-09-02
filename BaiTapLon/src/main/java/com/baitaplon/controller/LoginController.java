@@ -13,13 +13,12 @@ import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
-import java.sql.SQLException;
 
 @Controller
 public class LoginController {
     @RequestMapping(value = {"/student-login"}, method = RequestMethod.GET)
     public String studentLogin(@ModelAttribute(name = "error") String error) {
-        return "loginStudent";
+        return "login/loginStudent";
     }
 
     // Nhận dữ liệu bằng phương thức POST
@@ -37,8 +36,8 @@ public class LoginController {
             try {
                 Student student = studentsDAO.checkLogin(username, password);
                 if (student != null) {
-                    request.getSession().setAttribute("sinhvien", student);
-                    modelAndView.setViewName("redirect:/ok");
+                    request.getSession().setAttribute("student", student);
+                    modelAndView.setViewName("redirect:/sutudent/info");
                 }
                 else {
                     String error = "Username or password invalid !!!";
@@ -54,12 +53,7 @@ public class LoginController {
 
     @RequestMapping(value = {"/teacher-login"})
     public String teacherLogin() {
-        return "loginTeacher";
-    }
-
-    @RequestMapping("/ok")
-    public String loginOk() {
-        return "admin";
+        return "login/loginTeacher";
     }
 
     //Thử xem nào.
