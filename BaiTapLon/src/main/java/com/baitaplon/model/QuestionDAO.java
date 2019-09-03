@@ -1,6 +1,7 @@
 package com.baitaplon.model;
 
 import com.baitaplon.objects.Question;
+import com.baitaplon.objects.SQuestion;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -163,4 +164,53 @@ public class QuestionDAO implements Management {
             addSV_Question(studentID, key, answers.get(key));
         }
     }
+
+    //Lấy kết quả thi ra từ bẳng
+    public  int getScores(String studentID) {
+        int scores = 0;
+        String sqlRequest = "SELECT COUNT(*) FROM dbo.question INNER JOIN dbo.sv_question\n" +
+                "ON sv_question.questionid = question.questionid AND masv = '"+studentID+"' AND answer = correct";
+        try {
+            preparedStatement = connection.prepareStatement(sqlRequest);
+            resultSet = preparedStatement.executeQuery();
+            if(resultSet.next()) {
+                scores = resultSet.getInt(1);
+            }
+            System.out.println("get Scores Susscess");
+            return  scores;
+        }catch (Exception ex) {
+            ex.printStackTrace();
+            System.out.println("get Scores fail");
+            return scores;
+        }
+    }
+
+    public List getListScores( String studentID) {
+        List<SQuestion> sQuestionList = new ArrayList<SQuestion>();
+        String sqlRequest = "SELECT masv, sv_question.questionid, content, answer, correct FROM dbo.question INNER JOIN dbo.sv_question\n" +
+                "ON sv_question.questionid = question.questionid AND masv = '"+studentID+"'";
+        try {
+            preparedStatement = connection.prepareStatement(sqlRequest);
+            resultSet = preparedStatement.executeQuery();
+            while (resultSet.next()) {
+                SQuestion sQuestion = new SQuestion();
+                sQuestion.setStudentID(resultSet.getString("masv"));
+                sQuestion.setQuestionID(resultSet.getInt("questionid"));
+                sQuestion.setContent(resultSet.getString("content"));
+                sQuestion.setAnswer(resultSet.getString("answer"));
+                sQuestion.setCorrect(resultSet.getString("correct"));
+                sQuestionList.add(sQuestion);
+            }
+            return  sQuestionList;
+        }catch (Exception ex) {
+            ex.printStackTrace();
+            System.out.println("get list answer fail");
+            return sQuestionList;
+        }
+    }
+
+//    public static void main(String args[]) {
+//        int score = new QuestionDAO().getScores("AT140216");
+//        System.out.println(score);
+//    }
 }

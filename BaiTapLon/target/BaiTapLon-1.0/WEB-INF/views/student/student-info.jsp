@@ -26,9 +26,9 @@
         <div class="logo"><a href="#">Management</a></div>
         <div class="info"><i class="fal fa-user-circle"></i> ${ student.name } </div>
         <div class="nav">
-            <a href="#">Thông tin</a>
+            <a href="${pageContext.request.contextPath}/student/info">Thông tin</a>
             <a href="${pageContext.request.contextPath}/sinhvien/thi-trac-nghiem">Câu hỏi</a>
-            <a href="#">Bảng điểm</a>
+            <a href="${pageContext.request.contextPath}/sinhvien/bang-diem">Bảng điểm</a>
         </div>
     </div>
     <div class="main">

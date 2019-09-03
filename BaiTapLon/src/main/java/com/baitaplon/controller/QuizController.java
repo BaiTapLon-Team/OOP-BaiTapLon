@@ -21,10 +21,10 @@ public class QuizController {
         QuestionDAO questionDAO = new QuestionDAO();
         List questionList = questionDAO.getList();
         model.addAttribute("questionList", questionList);
-        return "student/thitracnghiem";
+        return "student/quiz";
     }
 
-    @RequestMapping(value = "/ket-qua-thi", method = RequestMethod.POST)
+    @RequestMapping(value = "/sinhvien/ket-qua-thi", method = RequestMethod.POST)
     public String handleQuizStudent( Model model, HttpServletRequest request, HttpServletResponse response ) {
         Map<Integer, String> mapStudentAnswer = new HashMap<Integer, String>();
         int i = 0;
@@ -38,7 +38,19 @@ public class QuizController {
         String StudentID = student.getId();
         QuestionDAO questionDAO = new QuestionDAO();
         questionDAO.addSV_Questions(student.getId(), mapStudentAnswer);
-        return "student-info";
+        return "redirect:/sinhvien/bang-diem";
     }
+
+    @RequestMapping(value = "/sinhvien/bang-diem")
+    public String scoreTable(Model model , HttpServletRequest request, HttpServletResponse response) {
+        QuestionDAO questionDAO = new QuestionDAO();
+        Student student = (Student) request.getSession().getAttribute("student");
+        List sQuesstionList = questionDAO.getListScores(student.getId());
+        int scores = questionDAO.getScores(student.getId());
+        model.addAttribute("sQuesionList", sQuesstionList);
+        model.addAttribute("scores", scores);
+        return "student/scorestudent";
+    }
+
 
 }
