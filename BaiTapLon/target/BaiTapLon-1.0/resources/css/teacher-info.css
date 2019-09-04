@@ -1,0 +1,12 @@
+.info label {
+    display: inline-block;
+    width: 250px;
+}
+
+.info input[type = text] {
+    width: calc(100% - 300px);
+}
+
+.content {
+    margin: 20px 40px 20px 40px;
+}

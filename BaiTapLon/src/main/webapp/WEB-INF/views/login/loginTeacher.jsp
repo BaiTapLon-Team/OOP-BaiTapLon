@@ -26,7 +26,8 @@
         </div>
 
     </div>
-    <form action="#" class="form-content" method="post">
+    <c:url value="/teacher-login" var="url"/>
+    <form action="${url}" class="form-content" method="post">
         <div id="username">
             <span>Username</span>
             <input type="text" name="username" placeholder="Your Username" autocomplete="off">
@@ -45,7 +46,7 @@
         </div>
         <input type="submit" name="submit" value="Login">
     </form>
-    <div id="error">This is a error.</div>
+    <div id="error">${ error }</div>
 </div>
 </body>
 

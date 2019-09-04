@@ -34,7 +34,7 @@
     <div class="main">
         <div class="navbar">
             <span class="content-titel"><i class="fal fa-users"></i> Thông tin cá nhân</span>
-            <a href="#" class="logout">Đăng xuất</a>
+            <a href="<c:url value="/logout"/>" class="logout">Đăng xuất</a>
         </div>
         <div class="content">
             <div class="view-info">

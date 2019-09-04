@@ -14,7 +14,7 @@ import java.util.Map;
 public class StudentsDAO implements Management {
     private Connection connection = new ConnectDatabase().getConnection();
 
-    public Student checkLogin(String username, String password) throws SQLException, ClassNotFoundException{
+    public Student checkLogin(String username, String password) throws SQLException {
         String sql = "SELECT * FROM sinhvien WHERE username = ? AND password = ?";
 
         PreparedStatement preparedStatement = connection.prepareStatement(sql);
@@ -22,7 +22,7 @@ public class StudentsDAO implements Management {
         preparedStatement.setString(2, password);
         ResultSet rs = preparedStatement.executeQuery();
         Student student = null;
-        if(rs.next()) {
+        if (rs.next()) {
             student = (Student) getInfo(rs.getString(1));
             return student;
         }
@@ -30,15 +30,15 @@ public class StudentsDAO implements Management {
         return student;
     }
 
-    public List getList () {
+    public List getList() {
         return null;
     }
 
-    public void add ( Object object ) {
+    public void add(Object object) {
 
     }
 
-    public void edit ( Object object ) throws SQLException {
+    public void edit(Object object) throws SQLException {
         Student student = (Student) object;
         String sql = "UPDATE sinhvien SET name = ?, birthday = ?, address = ?, phone = ?, gender = ?, email = ? WHERE masv = ?";
         PreparedStatement preparedStatement = connection.prepareStatement(sql);
@@ -53,21 +53,21 @@ public class StudentsDAO implements Management {
         connection.close();
     }
 
-    public void delete ( String id ) {
+    public void delete(String id) {
 
     }
 
-    public List find ( String args ) {
+    public List find(String args) {
         return null;
     }
 
-    public Object getInfo ( String id ) throws SQLException {
+    public Object getInfo(String id) throws SQLException {
         String sql = "SELECT * FROM sinhvien WHERE masv = ?";
         PreparedStatement preparedStatement = connection.prepareStatement(sql);
         preparedStatement.setString(1, id);
         ResultSet rs = preparedStatement.executeQuery();
         Student student = null;
-        if(rs.next()) {
+        if (rs.next()) {
             student = new Student();
             student.setId(rs.getString(1));
             student.setUsername(rs.getString(2));
@@ -86,7 +86,7 @@ public class StudentsDAO implements Management {
         return student;
     }
 
-    public  void addScores( String idSV, Map svQuestion ) {
+    public void addScores(String idSV, Map svQuestion) {
 
     }
 
