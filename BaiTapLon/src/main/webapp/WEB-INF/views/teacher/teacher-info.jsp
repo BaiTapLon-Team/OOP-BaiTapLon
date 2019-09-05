@@ -28,6 +28,7 @@
         <div class="info"><i class="fal fa-user-circle"></i> ${ teacher.name } </div>
         <div class="nav">
             <a href="<c:url value="/teacher/info"/>">Thông tin</a>
+            <a href="<c:url value="/teacher/manage-student"/>">Sinh viên</a>
             <a href="#">Câu hỏi</a>
             <a href="#">Bảng điểm</a>
         </div>
