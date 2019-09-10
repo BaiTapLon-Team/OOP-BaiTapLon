@@ -1,0 +1,23 @@
+.action {
+    justify-content: flex-end;
+    margin-bottom: 15px;
+}
+
+.action h1 {
+    margin-right: auto;
+}
+
+.action .add-content {
+    margin-right: 15px;
+}
+
+/*.footer {*/
+/*    width: calc(100% - 250px);*/
+/*    position: fixed;*/
+/*    bottom: 0;*/
+/*}*/
+
+.content {
+    width: calc(100% - 40px);
+    margin: 20px;
+}

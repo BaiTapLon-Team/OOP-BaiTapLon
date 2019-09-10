@@ -26,7 +26,7 @@
         </div>
 
     </div>
-    <c:url value="/student-login" var="url"/>
+    <c:url value="/admin-login" var="url"/>
     <form action="${url}" class="form-content" method="post" >
         <div id="username">
             <span>Username</span>

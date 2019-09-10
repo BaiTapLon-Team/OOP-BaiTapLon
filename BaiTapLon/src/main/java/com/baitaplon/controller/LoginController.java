@@ -1,7 +1,11 @@
 package com.baitaplon.controller;
 
+import com.baitaplon.model.AdminDAO;
 import com.baitaplon.model.StudentsDAO;
+import com.baitaplon.model.TeacherDAO;
+import com.baitaplon.objects.Admin;
 import com.baitaplon.objects.Student;
+import com.baitaplon.objects.Teacher;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
@@ -24,7 +28,7 @@ public class LoginController {
     // Nhận dữ liệu bằng phương thức POST
     @RequestMapping(value = {"/student-login"}, method = RequestMethod.POST)
     public ModelAndView studentLogin(@RequestParam(name = "username") String username,
-                                     @RequestParam(name = "password") String password, RedirectAttributes redirectAttributes, HttpSession httpSession, HttpServletRequest request, Model model) {
+                                     @RequestParam(name = "password") String password, HttpServletRequest request) {
         ModelAndView modelAndView = new ModelAndView();
         if (username == "" || password == "") {
             String error = "Please complete username and password !";
@@ -51,8 +55,80 @@ public class LoginController {
         return  modelAndView;
     }
 
+    @RequestMapping(value = { "/logout" }, method = RequestMethod.GET)
+    public ModelAndView logoutStudent(HttpServletRequest request) {
+        request.getSession().setAttribute("student", null);
+        request.getSession().setAttribute("teacher", null);
+        request.getSession().setAttribute("admin", null);
+        ModelAndView model = new ModelAndView();
+        model.setViewName("redirect:/home");
+        return model;
+    }
+
     @RequestMapping(value = {"/teacher-login"})
-    public String teacherLogin() {
+    public String teacherLogin(@ModelAttribute(name = "error") String error) {
         return "login/loginTeacher";
     }
+
+    @RequestMapping(value = {"/teacher-login"}, method = RequestMethod.POST)
+    public ModelAndView teacherLogin(@RequestParam(name = "username") String username,
+                                     @RequestParam(name = "password") String password, HttpServletRequest request) {
+        ModelAndView modelAndView = new ModelAndView();
+        if (username == "" || password == "") {
+            String error = "Please complete username and password !";
+            modelAndView.addObject("error", error);
+            modelAndView.setViewName("redirect:/teacher-login");
+        } else {
+            TeacherDAO teacherDAO = new TeacherDAO();
+            try {
+                Teacher teacher = teacherDAO.checkLogin(username, password);
+                if (teacher != null) {
+                    request.getSession().setAttribute("teacher", teacher);
+                    modelAndView.setViewName("redirect:/teacher/info");
+                }
+                else {
+                    String error = "Username or password invalid !!!";
+                    modelAndView.addObject("error", error);
+                    modelAndView.setViewName("redirect:/teacher-login");
+                }
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        }
+        return  modelAndView;
+    }
+
+    @RequestMapping(value = {"/admin-login"})
+    public String adminLogin(@ModelAttribute(name = "error") String error) {
+        return "login/loginAdmin";
+    }
+
+    @RequestMapping(value = {"/admin-login"}, method = RequestMethod.POST)
+    public ModelAndView adminLogin(@RequestParam(name = "username") String username,
+                                     @RequestParam(name = "password") String password, HttpServletRequest request) {
+        ModelAndView modelAndView = new ModelAndView();
+        if (username == "" || password == "") {
+            String error = "Please complete username and password !";
+            modelAndView.addObject("error", error);
+            modelAndView.setViewName("redirect:/admin-login");
+        } else {
+            AdminDAO adminDAO = new AdminDAO();
+            try {
+                Admin admin = adminDAO.checkLogin(username, password);
+                if (admin != null) {
+                    request.getSession().setAttribute("admin", admin);
+                    modelAndView.setViewName("redirect:/admin/info");
+                }
+                else {
+                    String error = "Username or password invalid !!!";
+                    modelAndView.addObject("error", error);
+                    modelAndView.setViewName("redirect:/admin-login");
+                }
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        }
+        return  modelAndView;
+    }
+
 }
