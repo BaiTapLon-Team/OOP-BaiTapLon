@@ -12,6 +12,7 @@ com\baitaplon\objects\Teacher.class
 com\baitaplon\model\ConnectDatabase.class
 com\baitaplon\model\TeacherDAO.class
 com\baitaplon\objects\Student.class
+com\baitaplon\controller\ManageStudentController.class
 com\baitaplon\controller\LoginController.class
 com\baitaplon\controller\AdminController.class
 com\baitaplon\controller\TeacherController.class
