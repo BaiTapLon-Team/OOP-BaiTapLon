@@ -49,7 +49,7 @@
                         <input type="hidden" name="questionID${index}" value="${questionList[index].questionID}">
                         <div class="content-question">
                             <h2>Câu 1: Can I park here?</h2>
-                            <button type="button" onclick="showModalEditQuestion()">Sửa</button>
+                            <button type="button" onclick="showModalEditQuestion('01', 'Test', 'test', 'test', 'test', 'test', 'test')">Sửa</button>
                             <a href="#">Xóa</a>
                         </div>
                         <h3><input type="radio" checked="checked" name="${index}" id="${index}"
@@ -66,7 +66,7 @@
                         <input type="hidden" name="questionID${index}" value="${questionList[index].questionID}">
                         <div class="content-question">
                             <h2>Câu 2: Can I park here?</h2>
-                            <button type="button" onclick="showModalEditQuestion()">Sửa</button>
+                            <button type="button" onclick="showModalEditQuestion('02', 'Test2', 'test2', 'test2', 'test2', 'test2', 'test2')">Sửa</button>
                             <a href="#">Xóa</a>
                         </div>
                         <h3><input type="radio" checked="checked" name="${index}" id="${index}"
@@ -145,14 +145,20 @@
     }
 
     var modalEdit = document.getElementsByClassName("modal-edit-question")[0];
-    function showModalEditQuestion(test1, test2) {
+    function showModalEditQuestion(questionId,content, correct, answer_a, answer_b, answer_c, answer_d) {
         modalEdit.style.top = "0px";
-
+        document.getElementById("questionId").value = questionId;
+        document.getElementById("content").value = content;
+        document.getElementById("correct").value = correct;
+        document.getElementById("answer_a").value = answer_a;
+        document.getElementById("answer_b").value = answer_b;
+        document.getElementById("answer_c").value = answer_c;
+        document.getElementById("answer_d").value = answer_d;
     }
     function hideModalEditQuestion() {
         modalEdit.style.top = "-3000px";
     }
 </script>
-</body> 
+</body>
 
 </html>

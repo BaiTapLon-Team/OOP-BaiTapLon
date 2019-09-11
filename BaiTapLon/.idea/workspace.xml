@@ -7,22 +7,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8516b04a-ca07-4888-90e8-0c5104cb83d1" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/baitaplon/controller/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/baitaplon/controller/LoginController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/baitaplon/controller/TeacherController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/baitaplon/controller/TeacherController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/admin/admin-info.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/admin/admin-info.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/student/scorestudent.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/student/scorestudent.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/teacher/teacher-info.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/teacher/teacher-info.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/BaiTapLon-1.0.war" beforeDir="false" afterPath="$PROJECT_DIR$/target/BaiTapLon-1.0.war" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/BaiTapLon-1.0/WEB-INF/classes/com/baitaplon/controller/LoginController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/BaiTapLon-1.0/WEB-INF/classes/com/baitaplon/controller/LoginController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/BaiTapLon-1.0/WEB-INF/classes/com/baitaplon/controller/TeacherController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/BaiTapLon-1.0/WEB-INF/classes/com/baitaplon/controller/TeacherController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/BaiTapLon-1.0/WEB-INF/views/admin/admin-info.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/BaiTapLon-1.0/WEB-INF/views/admin/admin-info.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/BaiTapLon-1.0/WEB-INF/views/teacher/teacher-info.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/BaiTapLon-1.0/WEB-INF/views/teacher/teacher-info.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/baitaplon/controller/TeacherController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/baitaplon/controller/TeacherController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/teacher/list-question.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/teacher/list-question.jsp" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <ignored path="$PROJECT_DIR$/out/" />
@@ -94,8 +79,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/teacher/list-question.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="558">
-              <caret line="155" column="7" lean-forward="true" selection-start-line="155" selection-start-column="7" selection-end-line="155" selection-end-column="7" />
+            <state relative-caret-position="504">
+              <caret line="72" column="49" selection-start-line="72" selection-start-column="49" selection-end-line="72" selection-end-column="49" />
             </state>
           </provider>
         </entry>
@@ -160,8 +145,8 @@
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/teacher/manage-student.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/teacher/student-edit.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/resources/css/listQuestion.css" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/teacher/list-question.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/student/scorestudent.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/teacher/list-question.jsp" />
       </list>
     </option>
   </component>
@@ -415,12 +400,12 @@
       <workItem from="1568121262958" duration="41000" />
       <workItem from="1568121531336" duration="12795000" />
       <workItem from="1568170241027" duration="2909000" />
-      <workItem from="1568179748097" duration="252000" />
+      <workItem from="1568179748097" duration="970000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="49528000" />
+    <option name="totallyTimeSpent" value="50246000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="54" y="-8" width="1874" height="1096" extended-state="6" />
@@ -737,8 +722,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/teacher/list-question.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="558">
-          <caret line="155" column="7" lean-forward="true" selection-start-line="155" selection-start-column="7" selection-end-line="155" selection-end-column="7" />
+        <state relative-caret-position="504">
+          <caret line="72" column="49" selection-start-line="72" selection-start-column="49" selection-end-line="72" selection-end-column="49" />
         </state>
       </provider>
     </entry>
