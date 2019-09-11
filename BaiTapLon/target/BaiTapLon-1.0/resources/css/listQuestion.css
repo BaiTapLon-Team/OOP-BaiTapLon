@@ -1,0 +1,112 @@
+.action h1 {
+    margin-right: auto;
+}
+
+.content form {
+    margin: 30px 100px 30px 100px;
+}
+
+.question {
+    margin-bottom: 25px;
+}
+
+.question h2 {
+    margin-right: auto;
+}
+
+.question h3 {
+    margin: 15px 20px 15px 20px;
+}
+
+.modal {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: -3000px;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.67);
+    overflow: hidden;
+    transition: 0.8s;
+}
+
+.modal-edit-question {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: -3000px;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.67);
+    overflow: hidden;
+    transition: 0.8s;
+}
+
+.modal-dialog {
+    position: absolute;
+    width: 500px;
+    background-color: white;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 40px;
+    border-radius: 15px;
+}
+
+.modal-dialog h1 {
+    text-align: center;
+}
+
+.modal-dialog label {
+    display: block;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    font-size: 20px;
+}
+
+.modal-dialog textarea, .modal-dialog input[type="text"] {
+    display: block;
+    width: 100%;
+    font-size: 20px;
+    padding: 10px;
+    box-sizing: border-box;
+    border: 0;
+    border: 1px solid rgb(184, 185, 185);
+    border-radius: 5px;
+}
+
+.modal-dialog input[type="submit"], .modal-dialog .hide {
+    padding: 10px;
+    width: 100px;
+    margin: 0px 15px 0px 15px;
+    color: white;
+    background-color: #1abc9c;
+    border: 0;
+    font-size: 15px;
+    border-radius: 5px;
+}
+
+.modal-dialog .btn {
+    display: flex;
+    justify-content: center;
+    margin-top: 25px;
+}
+
+.content-question {
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 50px;
+    align-items: center;
+}
+
+.content-question button, .content-question a {
+    display: inline-block;
+    padding: 10px;
+    width: 50px;
+    margin: 0px 5px 0px 5px;
+    color: white;
+    background-color: #1abc9c;
+    border: 0;
+    font-size: 15px;
+    border-radius: 5px;
+    box-sizing: border-box;
+    text-align: center;
+}

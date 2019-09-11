@@ -1,6 +1,6 @@
-
 D:\Full code\JavaFull\JAVA-WEB-Intellij\BaiTapLon\src\main\java\com\baitaplon\model\AdminDAO.java
 D:\Full code\JavaFull\JAVA-WEB-Intellij\BaiTapLon\src\main\java\com\baitaplon\objects\Student.java
+D:\Full code\JavaFull\JAVA-WEB-Intellij\BaiTapLon\src\main\java\com\baitaplon\controller\ManageStudentController.java
 D:\Full code\JavaFull\JAVA-WEB-Intellij\BaiTapLon\src\main\java\com\baitaplon\model\QuestionDAO.java
 D:\Full code\JavaFull\JAVA-WEB-Intellij\BaiTapLon\src\main\java\com\baitaplon\model\StudentsDAO.java
 D:\Full code\JavaFull\JAVA-WEB-Intellij\BaiTapLon\src\main\java\com\baitaplon\objects\Person.java
@@ -17,4 +17,3 @@ D:\Full code\JavaFull\JAVA-WEB-Intellij\BaiTapLon\src\main\java\com\baitaplon\ob
 D:\Full code\JavaFull\JAVA-WEB-Intellij\BaiTapLon\src\main\java\com\baitaplon\controller\TeacherController.java
 D:\Full code\JavaFull\JAVA-WEB-Intellij\BaiTapLon\src\main\java\com\baitaplon\controller\QuizController.java
 D:\Full code\JavaFull\JAVA-WEB-Intellij\BaiTapLon\src\main\java\com\baitaplon\model\TeacherDAO.java
-

@@ -33,7 +33,7 @@
     <div class="main">
         <div class="navbar">
             <span class="content-titel"><i class="fal fa-users"></i> Sinh Viên</span>
-            <a href="#" class="logout">Đăng xuất</a>
+            <a href="<c:url value="/logout"/>" class="logout">Đăng xuất</a>
         </div>
         <!-- nội dung đặt trong content -->
         <div class="content">
