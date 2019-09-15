@@ -1,6 +1,9 @@
 package com.baitaplon.controller;
 
 import com.baitaplon.model.QuestionDAO;
+import com.baitaplon.model.SVQuestionDAO;
+import com.baitaplon.objects.Question;
+import com.baitaplon.objects.SQuestion;
 import com.baitaplon.objects.Student;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -28,27 +31,45 @@ public class QuizController {
     public String handleQuizStudent( Model model, HttpServletRequest request, HttpServletResponse response ) {
         Map<Integer, String> mapStudentAnswer = new HashMap<Integer, String>();
         int i = 0;
-        while (request.getParameter(String.valueOf(i)) != null) {
-            String sAnswer = request.getParameter(String.valueOf(i));
-            Integer questionID = Integer.parseInt(request.getParameter("questionID"+String.valueOf(i)));
-            mapStudentAnswer.put(questionID, sAnswer);
-            i++;
+        try {
+            while (request.getParameter(String.valueOf(i)) != null) {
+                String sAnswer = request.getParameter(String.valueOf(i));
+                Integer questionID = Integer.parseInt(request.getParameter("questionID" + String.valueOf(i)));
+                mapStudentAnswer.put(questionID, sAnswer);
+                i++;
+            }
+            Student student = (Student) request.getSession().getAttribute("student");
+            String StudentID = student.getId();
+            SVQuestionDAO svQuestionDAO = new SVQuestionDAO();
+            if (svQuestionDAO.getAnswerList(student.getId()).size() == 0) {
+                svQuestionDAO.addSV_Questions(student.getId(), mapStudentAnswer);
+                svQuestionDAO.addScores(student.getId(), svQuestionDAO.getScores(student.getId()));
+            } else {
+                svQuestionDAO.updateSV_Questions(student.getId(), mapStudentAnswer);
+                svQuestionDAO.updateScores(student.getId(), svQuestionDAO.getScores(student.getId()));
+            }
+            return "redirect:/sinhvien/bang-diem";
+        } catch (Exception ex) {
+            ex.printStackTrace();
+            return "Thi thất bại. Để yên và báo cho giám thị ở đó. Thi ca sau !";
         }
-        Student student = (Student) request.getSession().getAttribute("student");
-        String StudentID = student.getId();
-        QuestionDAO questionDAO = new QuestionDAO();
-        questionDAO.addSV_Questions(student.getId(), mapStudentAnswer);
-        return "redirect:/sinhvien/bang-diem";
     }
 
     @RequestMapping(value = "/sinhvien/bang-diem")
-    public String scoreTable(Model model , HttpServletRequest request, HttpServletResponse response) {
-        QuestionDAO questionDAO = new QuestionDAO();
+    public String scoreTableSV(Model model , HttpServletRequest request, HttpServletResponse response) {
+        SVQuestionDAO svQuestionDAO = new SVQuestionDAO();
         Student student = (Student) request.getSession().getAttribute("student");
-        List sQuesstionList = questionDAO.getListScores(student.getId());
-        int scores = questionDAO.getScores(student.getId());
-        model.addAttribute("sQuesionList", sQuesstionList);
-        model.addAttribute("scores", scores);
+        List sQuesstionList = svQuestionDAO.getAnswerList(student.getId());
+        int scores = svQuestionDAO.getScores(student.getId());
+        if(sQuesstionList.size() == 0) {
+            SQuestion sQuestion = new SQuestion(student.getId(), 0, "Bạn chưa thi lần nào", " ", " ");
+            sQuesstionList.add(sQuestion);
+            model.addAttribute("sQuesionList", sQuesstionList);
+            model.addAttribute("scores", scores);
+        } else {
+            model.addAttribute("sQuesionList", sQuesstionList);
+            model.addAttribute("scores", scores);
+        }
         return "student/scorestudent";
     }
 
