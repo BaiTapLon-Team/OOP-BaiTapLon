@@ -7,36 +7,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8516b04a-ca07-4888-90e8-0c5104cb83d1" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/baitaplon/model/SVQuestionDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/baitaplon/objects/SVQuestion.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/teacher/scores-table.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/baitaplon/controller/ManageStudentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/baitaplon/controller/ManageStudentController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/baitaplon/controller/QuizController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/baitaplon/controller/QuizController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/baitaplon/controller/TeacherController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/baitaplon/controller/TeacherController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/baitaplon/model/ConnectDatabase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/baitaplon/model/ConnectDatabase.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/baitaplon/model/QuestionDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/baitaplon/model/QuestionDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/homepage.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/homepage.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/teacher/add-student.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/teacher/add-student.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/teacher/list-question.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/teacher/list-question.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/teacher/manage-student.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/teacher/manage-student.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/teacher/scores-table.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/teacher/scores-table.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/teacher/student-edit.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/teacher/student-edit.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/teacher/teacher-info.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/teacher/teacher-info.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/BaiTapLon-1.0.war" beforeDir="false" afterPath="$PROJECT_DIR$/target/BaiTapLon-1.0.war" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/BaiTapLon-1.0/WEB-INF/classes/com/baitaplon/controller/ManageStudentController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/BaiTapLon-1.0/WEB-INF/classes/com/baitaplon/controller/ManageStudentController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/BaiTapLon-1.0/WEB-INF/classes/com/baitaplon/controller/QuizController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/BaiTapLon-1.0/WEB-INF/classes/com/baitaplon/controller/QuizController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/BaiTapLon-1.0/WEB-INF/classes/com/baitaplon/controller/TeacherController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/BaiTapLon-1.0/WEB-INF/classes/com/baitaplon/controller/TeacherController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/BaiTapLon-1.0/WEB-INF/classes/com/baitaplon/model/QuestionDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/BaiTapLon-1.0/WEB-INF/classes/com/baitaplon/model/QuestionDAO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/BaiTapLon-1.0/WEB-INF/views/student/scorestudent.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/BaiTapLon-1.0/WEB-INF/views/student/scorestudent.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/BaiTapLon-1.0/WEB-INF/views/teacher/list-question.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/BaiTapLon-1.0/WEB-INF/views/teacher/list-question.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/BaiTapLon-1.0/WEB-INF/views/teacher/teacher-info.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/BaiTapLon-1.0/WEB-INF/views/teacher/teacher-info.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/baitaplon/controller/LoginController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/baitaplon/controller/LoginController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/baitaplon/controller/ManageStudentController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/baitaplon/controller/ManageStudentController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/baitaplon/controller/QuizController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/baitaplon/controller/QuizController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/baitaplon/controller/TeacherController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/baitaplon/controller/TeacherController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/baitaplon/model/QuestionDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/baitaplon/model/QuestionDAO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/BaiTapLon-1.0/WEB-INF/views/homepage.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/BaiTapLon-1.0/WEB-INF/views/homepage.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/BaiTapLon-1.0/WEB-INF/views/teacher/scores-table.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/BaiTapLon-1.0/WEB-INF/views/teacher/scores-table.jsp" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <ignored path="$PROJECT_DIR$/out/" />
@@ -52,31 +33,91 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/baitaplon/controller/TeacherController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="130">
-              <caret line="124" selection-start-line="124" selection-end-line="124" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/teacher/scores-table.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="220">
-              <caret line="67" column="47" lean-forward="true" selection-start-line="67" selection-start-column="47" selection-end-line="67" selection-end-column="47" />
+            <state relative-caret-position="319">
+              <caret line="29" column="72" selection-start-line="29" selection-start-column="72" selection-end-line="29" selection-end-column="72" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/baitaplon/model/SVQuestionDAO.java">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/teacher/student-edit.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="50">
-              <caret line="145" column="49" lean-forward="true" selection-start-line="145" selection-start-column="49" selection-end-line="145" selection-end-column="49" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="174">
+              <caret line="43" column="73" selection-start-line="43" selection-start-column="73" selection-end-line="43" selection-end-column="73" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/teacher/teacher-info.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="306">
+              <caret line="75" column="100" selection-start-line="75" selection-start-column="100" selection-end-line="75" selection-end-column="100" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/homepage.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="283">
+              <caret line="48" column="76" lean-forward="true" selection-start-line="48" selection-start-column="76" selection-end-line="48" selection-end-column="76" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/admin.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="22">
+              <caret line="24" column="29" selection-start-line="24" selection-start-column="29" selection-end-line="24" selection-end-column="29" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/student/student-edit.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="22">
+              <caret line="48" column="36" lean-forward="true" selection-start-line="48" selection-start-column="36" selection-end-line="48" selection-end-column="36" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/student/student-info.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="503">
+              <caret line="69" column="71" selection-start-line="69" selection-start-column="71" selection-end-line="69" selection-end-column="71" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/teacher/add-student.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="174">
+              <caret line="43" column="73" selection-start-line="43" selection-start-column="73" selection-end-line="43" selection-end-column="73" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/teacher/list-question.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="341">
+              <caret line="31" column="74" lean-forward="true" selection-start-line="31" selection-start-column="74" selection-end-line="31" selection-end-column="74" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/teacher/manage-student.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="174">
+              <caret line="73" column="124" lean-forward="true" selection-start-line="73" selection-start-column="124" selection-end-line="73" selection-end-column="124" />
             </state>
           </provider>
         </entry>
@@ -88,6 +129,7 @@
       <list>
         <option value="Class" />
         <option value="Jsp File" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -115,13 +157,15 @@
         <option value="$PROJECT_DIR$/src/main/java/com/baitaplon/objects/SVQuestion.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/baitaplon/model/SVQuestionDAO.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/baitaplon/controller/TeacherController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/baitaplon/controller/ManageStudentController.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/teacher/index.html" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/teacher/list-question.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/teacher/manage-student.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/teacher/scores-table.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/teacher/student-edit.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/teacher/teacher-info.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/com/baitaplon/controller/ManageStudentController.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/teacher/add-student.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/teacher/scores-table.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/teacher/manage-student.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/homepage.jsp" />
       </list>
     </option>
   </component>
@@ -149,9 +193,10 @@
     </treeState>
   </component>
   <component name="ProjectFrameBounds" extendedState="7">
-    <option name="x" value="55" />
-    <option name="width" value="1246" />
-    <option name="height" value="1087" />
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1612" />
+    <option name="height" value="876" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -252,98 +297,20 @@
               <item name="views" type="462c0819:PsiDirectoryNode" />
               <item name="teacher" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="BaiTapLon" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-            </path>
-            <path>
-              <item name="BaiTapLon" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="Maven: org.springframework:spring-context:5.1.5.RELEASE" type="70bed36:NamedLibraryElementNode" />
-            </path>
-            <path>
-              <item name="BaiTapLon" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="Maven: org.springframework:spring-context:5.1.5.RELEASE" type="70bed36:NamedLibraryElementNode" />
-              <item name="spring-context-5.1.5.RELEASE.jar" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="BaiTapLon" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="Maven: org.springframework:spring-context:5.1.5.RELEASE" type="70bed36:NamedLibraryElementNode" />
-              <item name="spring-context-5.1.5.RELEASE.jar" type="462c0819:PsiDirectoryNode" />
-              <item name="ui" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="BaiTapLon" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="Maven: org.springframework:spring-web:5.1.5.RELEASE" type="70bed36:NamedLibraryElementNode" />
-            </path>
-            <path>
-              <item name="BaiTapLon" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="Maven: org.springframework:spring-web:5.1.5.RELEASE" type="70bed36:NamedLibraryElementNode" />
-              <item name="spring-web-5.1.5.RELEASE.jar" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="BaiTapLon" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="Maven: org.springframework:spring-web:5.1.5.RELEASE" type="70bed36:NamedLibraryElementNode" />
-              <item name="spring-web-5.1.5.RELEASE.jar" type="462c0819:PsiDirectoryNode" />
-              <item name="filter" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="BaiTapLon" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="Maven: org.springframework:spring-web:5.1.5.RELEASE" type="70bed36:NamedLibraryElementNode" />
-              <item name="spring-web-5.1.5.RELEASE.jar" type="462c0819:PsiDirectoryNode" />
-              <item name="support" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="BaiTapLon" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="Maven: org.springframework:spring-webmvc:5.1.5.RELEASE" type="70bed36:NamedLibraryElementNode" />
-            </path>
-            <path>
-              <item name="BaiTapLon" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="Maven: org.springframework:spring-webmvc:5.1.5.RELEASE" type="70bed36:NamedLibraryElementNode" />
-              <item name="spring-webmvc-5.1.5.RELEASE.jar" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="BaiTapLon" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="Maven: org.springframework:spring-webmvc:5.1.5.RELEASE" type="70bed36:NamedLibraryElementNode" />
-              <item name="spring-webmvc-5.1.5.RELEASE.jar" type="462c0819:PsiDirectoryNode" />
-              <item name="servlet" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="BaiTapLon" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="Maven: org.springframework:spring-webmvc:5.1.5.RELEASE" type="70bed36:NamedLibraryElementNode" />
-              <item name="spring-webmvc-5.1.5.RELEASE.jar" type="462c0819:PsiDirectoryNode" />
-              <item name="method" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="BaiTapLon" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="Maven: org.springframework:spring-webmvc:5.1.5.RELEASE" type="70bed36:NamedLibraryElementNode" />
-              <item name="spring-webmvc-5.1.5.RELEASE.jar" type="462c0819:PsiDirectoryNode" />
-              <item name="annotation" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1568561870839" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1568707305076" />
     <property name="restartRequiresConfirmation" value="false" />
   </component>
   <component name="RecentsManager">
@@ -460,24 +427,27 @@
       <workItem from="1568366422368" duration="61000" />
       <workItem from="1568384625723" duration="1442000" />
       <workItem from="1568472387849" duration="2597000" />
-      <workItem from="1568534957780" duration="8449000" />
+      <workItem from="1568534957780" duration="8729000" />
+      <workItem from="1568601420423" duration="96000" />
+      <workItem from="1568695229453" duration="1490000" />
+      <workItem from="1568704289675" duration="2491000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="82421000" />
+    <option name="totallyTimeSpent" value="86778000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="85" y="-8" width="1843" height="1096" extended-state="6" />
+    <frame x="85" y="-8" width="1843" height="1096" extended-state="7" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49125874" visible="true" weight="0.22153674" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4893617" visible="true" weight="0.22826697" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="UI Designer" order="3" />
       <window_info id="Favorites" order="4" side_tool="true" />
       <window_info id="Capture Tool" order="5" />
-      <window_info id="Web" order="6" sideWeight="0.50874126" side_tool="true" visible="true" weight="0.22153674" />
+      <window_info id="Web" order="6" sideWeight="0.5106383" side_tool="true" weight="0.22826697" />
       <window_info id="Image Layers" order="7" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
@@ -509,40 +479,7 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/baitaplon/controller/TeacherController.java</url>
-          <line>122</line>
-          <properties />
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
-  </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/homepage.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="462">
-          <caret line="22" column="7" selection-start-line="22" selection-start-column="7" selection-end-line="22" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1050">
-          <caret line="50" column="21" selection-start-line="50" selection-start-column="21" selection-end-line="50" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/spring-servlet-config.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="462">
-          <caret line="22" selection-start-line="22" selection-end-line="22" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/css/student-info.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="535">
@@ -602,20 +539,6 @@
     <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/student/student-info.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1211">
-          <caret line="69" column="71" selection-start-line="69" selection-start-column="71" selection-end-line="69" selection-end-column="71" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/student/quiz.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="440">
-          <caret line="53" column="166" selection-start-line="53" selection-start-column="136" selection-end-line="53" selection-end-column="166" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/baitaplon/controller/IndexController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="110">
@@ -627,13 +550,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/student/add-student.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="848">
-          <caret line="39" column="10" selection-start-line="39" selection-start-column="10" selection-end-line="39" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/baitaplon/controller/LoginController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2002">
@@ -641,13 +557,6 @@
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/baitaplon/controller/StudentController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="814">
-          <caret line="46" column="42" selection-start-line="46" selection-start-column="42" selection-end-line="46" selection-end-column="42" />
         </state>
       </provider>
     </entry>
@@ -676,13 +585,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="220">
           <caret line="11" column="64" selection-start-line="11" selection-start-column="64" selection-end-line="11" selection-end-column="64" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/baitaplon/controller/QuizController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="708">
-          <caret line="77" lean-forward="true" selection-start-line="77" selection-end-line="77" />
         </state>
       </provider>
     </entry>
@@ -721,13 +623,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/student/scorestudent.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-950">
-          <caret line="5" column="63" lean-forward="true" selection-start-line="5" selection-start-column="63" selection-end-line="5" selection-end-column="63" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/baitaplon/objects/SVQuestion.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="110">
@@ -749,76 +644,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/admin.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="22">
-          <caret line="24" column="29" selection-start-line="24" selection-start-column="29" selection-end-line="24" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/teacher/manage-student.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="29" column="74" lean-forward="true" selection-start-line="26" selection-start-column="12" selection-end-line="29" selection-end-column="74" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/teacher/list-question.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="31" column="59" selection-start-line="31" selection-start-column="21" selection-end-line="31" selection-end-column="59" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/student/student-edit.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="399">
-          <caret line="19" column="44" selection-start-line="19" selection-start-column="44" selection-end-line="19" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/teacher/teacher-info.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="427">
-          <caret line="32" column="74" selection-start-line="32" selection-start-column="74" selection-end-line="32" selection-end-column="74" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/student/manage-student.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="352">
-          <caret line="25" column="25" selection-start-line="25" selection-start-column="25" selection-end-line="25" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/baitaplon/controller/ManageStudentController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="436">
-          <caret line="116" column="69" lean-forward="true" selection-start-line="116" selection-start-column="69" selection-end-line="116" selection-end-column="69" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/baitaplon/objects/Teacher.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="44">
           <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/teacher/add-student.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-132">
-          <caret line="30" column="73" lean-forward="true" selection-start-line="30" selection-start-column="73" selection-end-line="30" selection-end-column="73" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/teacher/student-edit.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="413">
-          <caret line="31" column="74" lean-forward="true" selection-start-line="31" selection-start-column="74" selection-end-line="31" selection-end-column="74" />
         </state>
       </provider>
     </entry>
@@ -878,16 +707,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/baitaplon/model/SVQuestionDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="50">
-          <caret line="145" column="49" lean-forward="true" selection-start-line="145" selection-start-column="49" selection-end-line="145" selection-end-column="49" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/5.1.5.RELEASE/spring-web-5.1.5.RELEASE.jar!/org/springframework/web/filter/CharacterEncodingFilter.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="236">
@@ -895,17 +714,146 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/teacher/index.html" />
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/index.jsp">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/baitaplon/model/SVQuestionDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3014">
+          <caret line="145" column="49" selection-start-line="145" selection-start-column="49" selection-end-line="145" selection-end-column="49" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/baitaplon/controller/QuizController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="110">
+          <caret line="19" column="13" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/baitaplon/controller/StudentController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="814">
+          <caret line="46" column="42" selection-start-line="46" selection-start-column="42" selection-end-line="46" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/baitaplon/controller/TeacherController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="130">
+        <state relative-caret-position="716">
           <caret line="124" selection-start-line="124" selection-end-line="124" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/baitaplon/controller/ManageStudentController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="286">
+          <caret line="43" column="51" selection-start-line="43" selection-start-column="51" selection-end-line="43" selection-end-column="51" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/student/add-student.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-220">
+          <caret line="35" column="69" lean-forward="true" selection-start-line="35" selection-start-column="69" selection-end-line="35" selection-end-column="69" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/student/manage-student.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="570">
+          <caret line="82" column="20" lean-forward="true" selection-start-line="82" selection-start-column="20" selection-end-line="82" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/student/quiz.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="440">
+          <caret line="53" column="166" selection-start-line="53" selection-start-column="136" selection-end-line="53" selection-end-column="166" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/student/scorestudent.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="22">
+          <caret line="5" column="63" lean-forward="true" selection-start-line="5" selection-start-column="63" selection-end-line="5" selection-end-column="63" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/student/student-edit.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="22">
+          <caret line="48" column="36" lean-forward="true" selection-start-line="48" selection-start-column="36" selection-end-line="48" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/student/student-info.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="503">
+          <caret line="69" column="71" selection-start-line="69" selection-start-column="71" selection-end-line="69" selection-end-column="71" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/teacher/add-student.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="174">
+          <caret line="43" column="73" selection-start-line="43" selection-start-column="73" selection-end-line="43" selection-end-column="73" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/teacher/list-question.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="341">
+          <caret line="31" column="74" lean-forward="true" selection-start-line="31" selection-start-column="74" selection-end-line="31" selection-end-column="74" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/teacher/manage-student.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="174">
+          <caret line="73" column="124" lean-forward="true" selection-start-line="73" selection-start-column="124" selection-end-line="73" selection-end-column="124" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/teacher/scores-table.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="67" column="47" lean-forward="true" selection-start-line="67" selection-start-column="47" selection-end-line="67" selection-end-column="47" />
+        <state relative-caret-position="319">
+          <caret line="29" column="72" selection-start-line="29" selection-start-column="72" selection-end-line="29" selection-end-column="72" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/teacher/student-edit.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="174">
+          <caret line="43" column="73" selection-start-line="43" selection-start-column="73" selection-end-line="43" selection-end-column="73" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/teacher/teacher-info.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="75" column="100" selection-start-line="75" selection-start-column="100" selection-end-line="75" selection-end-column="100" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/admin.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="22">
+          <caret line="24" column="29" selection-start-line="24" selection-start-column="29" selection-end-line="24" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/homepage.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="283">
+          <caret line="48" column="76" lean-forward="true" selection-start-line="48" selection-start-column="76" selection-end-line="48" selection-end-column="76" />
         </state>
       </provider>
     </entry>

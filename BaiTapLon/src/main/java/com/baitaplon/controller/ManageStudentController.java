@@ -15,7 +15,7 @@ import java.util.List;
 
 @Controller
 public class ManageStudentController {
-    @RequestMapping(value = {"/teacher/manage-student"}, method = RequestMethod.GET)
+    @RequestMapping(value = {"/manage-student"}, method = RequestMethod.GET)
     public ModelAndView manageStudent(HttpServletRequest request) {
         ModelAndView modelAndView = new ModelAndView();
         List<Student> students = null;
@@ -47,7 +47,7 @@ public class ManageStudentController {
         return  modelAndView;
     }
 
-    @RequestMapping(value = {"/teacher/manage-student/edit"}, method = RequestMethod.GET)
+    @RequestMapping(value = {"/manage-student/edit"}, method = RequestMethod.GET)
     public ModelAndView editStudent(HttpServletRequest request) {
         ModelAndView modelAndView = new ModelAndView();
         String id = request.getParameter("id");
@@ -62,7 +62,7 @@ public class ManageStudentController {
         return  modelAndView;
     }
 
-    @RequestMapping(value = {"/teacher/manage-student/edit-db"}, method = RequestMethod.POST)
+    @RequestMapping(value = {"/manage-student/edit-db"}, method = RequestMethod.POST)
     public ModelAndView viewInfo(@ModelAttribute(name = "student") Student student, HttpServletRequest request) {
         String id = request.getParameter("id");
         student.setId(id);
@@ -74,11 +74,11 @@ public class ManageStudentController {
             System.out.println("Can not edit");
             e.printStackTrace();
         }
-        modelAndView.setViewName("redirect:/teacher/manage-student");
+        modelAndView.setViewName("redirect:/manage-student");
         return modelAndView;
     }
 
-    @RequestMapping(value = {"/teacher/manage-student/edit-delete"}, method = RequestMethod.GET)
+    @RequestMapping(value = {"/manage-student/edit-delete"}, method = RequestMethod.GET)
     public ModelAndView deleteStudent(HttpServletRequest request) {
         ModelAndView modelAndView = new ModelAndView();
         String id = request.getParameter("id");
@@ -89,11 +89,11 @@ public class ManageStudentController {
             System.out.println("Can not delete");
             e.printStackTrace();
         }
-        modelAndView.setViewName("redirect:/teacher/manage-student");
+        modelAndView.setViewName("redirect:/manage-student");
         return modelAndView;
     }
 
-    @RequestMapping(value = {"/teacher/manage-student/add-student"}, method = RequestMethod.GET)
+    @RequestMapping(value = {"/manage-student/add-student"}, method = RequestMethod.GET)
     public ModelAndView addStudent(HttpServletRequest request) {
         ModelAndView modelAndView = new ModelAndView();
         Student student = new Student();
@@ -102,7 +102,7 @@ public class ManageStudentController {
         return modelAndView;
     }
 
-    @RequestMapping(value = {"/teacher/manage-student/add-student"}, method = RequestMethod.POST)
+    @RequestMapping(value = {"/manage-student/add-student"}, method = RequestMethod.POST)
     public ModelAndView addStudent(@ModelAttribute(name = "student") Student student, HttpServletRequest request) {
         Teacher temp = (Teacher) request.getSession().getAttribute("teacher");
         ModelAndView modelAndView = new ModelAndView();
@@ -114,7 +114,7 @@ public class ManageStudentController {
             System.out.println("Can not add");
             e.printStackTrace();
         }
-        modelAndView.setViewName("redirect:/teacher/manage-student");
+        modelAndView.setViewName("redirect:/manage-student");
         return modelAndView;
     }
 }

@@ -27,7 +27,7 @@
         <div class="info"><i class="fal fa-user-circle"></i> ${ student.name } </div>
         <div class="nav">
             <a href="<c:url value="/teacher/info"/>">Thông tin</a>
-            <a href="<c:url value="/teacher/manage-student"/> ">Sinh viên</a>
+            <a href="<c:url value="/manage-student"/> ">Sinh viên</a>
             <a href="<c:url value="/teacher/list-question"/>">Câu hỏi</a>
             <a href="<c:url value="/teacher/scores-table"/>">Bảng điểm</a>
         </div>
@@ -40,7 +40,7 @@
         <div class="content">
             <div class="view-info">
                 <h1 id="titel-info">Chỉnh sửa thông tin sinh viên</h1>
-                <c:url value="/teacher/manage-student/add-student" var="url"/>
+                <c:url value="/manage-student/add-student" var="url"/>
                 <form:form action="${url}" id="box-info" modelAttribute="student" method="post">
                     <div class="info">
                         <label for="masv">Mã sinh viên</label>

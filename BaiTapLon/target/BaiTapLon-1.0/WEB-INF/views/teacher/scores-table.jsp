@@ -26,7 +26,7 @@
         <div class="info"><i class="fal fa-user-circle"></i>${teacher.name}</div>
         <div class="nav">
             <a href="<c:url value="/teacher/info"/>">Thông tin</a>
-            <a href="<c:url value="/teacher/manage-student"/> ">Sinh viên</a>
+            <a href="<c:url value="/manage-student"/> ">Sinh viên</a>
             <a href="<c:url value="/teacher/list-question"/>">Câu hỏi</a>
             <a href="#">Bảng điểm</a>
         </div>
@@ -60,16 +60,16 @@
                     </tr>
                 </c:forEach>
             </table>
-            <%--<div class="pagination">--%>
-                <%--<span>Showing 1 to 10 of 40 entries</span>--%>
-                <%--<ul class="">--%>
-                    <%--<li><a href="#0"><</a></li>--%>
-                    <%--<li><a href="#0">1</a></li>--%>
-                    <%--<li><a href="#0">2</a></li>--%>
-                    <%--<li><a href="#0">3</a></li>--%>
-                    <%--<li><a href="#0">></a></li>--%>
-                <%--</ul>--%>
-            <%--</div>--%>
+            <div class="pagination">
+                <span>Showing 1 to 10 of 40 entries</span>
+                <ul class="">
+                    <li><a href="#0"><</a></li>
+                    <li><a href="#0">1</a></li>
+                    <li><a href="#0">2</a></li>
+                    <li><a href="#0">3</a></li>
+                    <li><a href="#0">></a></li>
+                </ul>
+            </div>
         </div>
         <div class="footer">© 2019 codesieungu, made with love for a better web</div>
     </div>

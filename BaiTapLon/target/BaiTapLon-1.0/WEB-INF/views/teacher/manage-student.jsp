@@ -25,7 +25,7 @@
         <div class="info"><i class="fal fa-user-circle"></i> Name Admin</div>
         <div class="nav">
             <a href="<c:url value="/teacher/info"/>">Thông tin</a>
-            <a href="<c:url value="/teacher/manage-student"/> ">Sinh viên</a>
+            <a href="<c:url value="/manage-student"/> ">Sinh viên</a>
             <a href="<c:url value="/teacher/list-question"/>">Câu hỏi</a>
             <a href="<c:url value="/teacher/scores-table"/>">Bảng điểm</a>
         </div>
@@ -38,7 +38,7 @@
         <div class="content">
             <div class="action">
                 <h1>Danh sách sinh viên</h1>
-                <a href="<c:url value="/teacher/manage-student/add-student"/> " class="add-content">Thêm mới</a>
+                <a href="<c:url value="/manage-student/add-student"/> " class="add-content">Thêm mới</a>
                 <form action="#" class="search-from">
                     <input type="search" name="search" placeholder="Search records">
                     <input type="submit" name="submit" value="Search">
@@ -71,7 +71,7 @@
                         <td>${student.email}</td>
                         <td>${student.phone}</td>
                         <td>${student.magv}</td>
-                        <td><a href="<c:url value="/teacher/manage-student/edit?id=${student.id}"/> ">Sửa</a><a href="<c:url value="/teacher/manage-student/edit-delete?id=${student.id}"/> ">Xóa</a></td>
+                        <td><a href="<c:url value="/manage-student/edit?id=${student.id}"/> ">Sửa</a><a href="<c:url value="/manage-student/edit-delete?id=${student.id}"/> ">Xóa</a></td>
                     </tr>
                 </c:forEach>
             </table>
