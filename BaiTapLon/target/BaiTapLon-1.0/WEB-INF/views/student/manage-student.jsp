@@ -34,8 +34,8 @@
                 <a href="<c:url value="/teacher/info"/>">Thông tin</a>
                 <a href="<c:url value="/manage-student"/> ">Sinh viên</a>
             </c:if>
-            <a href="#">Câu hỏi</a>
-            <a href="#">Bảng điểm</a>
+            <a href="<c:url value="/teacher/list-question"/>">Câu hỏi</a>
+            <a href="<c:url value="/teacher/scores-table"/>">Bảng điểm</a>
         </div>
     </div>
     <div class="main">
