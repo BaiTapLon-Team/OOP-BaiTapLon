@@ -17,6 +17,7 @@
     <title>Bảng điểm</title>
     <%--    <link rel="stylesheet" href="./font-icon/fontawesome-pro-5.5.0-web/css/all.css">--%>
     <link type="text/css" rel="stylesheet" href="<c:url value="/resources/css/admin.css"/> ">
+    <link type="text/css" rel="stylesheet" href="<c:url value="/resources/css/teacher-manage.css"/> ">
 </head>
 
 <body>

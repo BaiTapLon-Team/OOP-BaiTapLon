@@ -25,12 +25,7 @@ public class StudentsDAO implements Management {
         return student;
     }
 
-    public List getList() {
-        return null;
-    }
-
-    public List getListStudent(int limit, int offset) throws SQLException {
-        String sql = "select * from sinhvien  ORDER BY masv OFFSET  ? ROWS  FETCH NEXT ? ROWS ONLY ";
+    public List getList(String sql, int limit, int offset) throws SQLException {
         PreparedStatement preparedStatement = connection.prepareStatement(sql);
         preparedStatement.setInt(2, limit);
         preparedStatement.setInt(1, offset);
@@ -55,6 +50,13 @@ public class StudentsDAO implements Management {
         connection.close();
         return studentList;
     }
+
+    public List getListStudent(int limit, int offset) throws SQLException {
+        String sql = "select * from sinhvien  ORDER BY masv OFFSET  ? ROWS  FETCH NEXT ? ROWS ONLY ";
+        List<Student> studentList = getList(sql, limit, offset);
+        return studentList;
+    }
+
 
     public int countStudent() throws SQLException, ClassNotFoundException {
         String sql = "SELECT COUNT(*) FROM sinhvien";
@@ -104,9 +106,13 @@ public class StudentsDAO implements Management {
         connection.close();
     }
 
-    public List find(String args) {
-        return null;
+    public List find(String args, int limit, int offset) throws SQLException {
+        String sql = "select * from sinhvien where name like N'%" + args + "%' or username like N'%" + args +
+                "%' or masv like N'%" + args + "%' ORDER BY masv OFFSET  ? ROWS  FETCH NEXT ? ROWS ONLY ";
+        List<Student> studentList = getList(sql, limit, offset);
+        return studentList;
     }
+
 
     public Object getInfo(String id) throws SQLException {
         String sql = "SELECT * FROM sinhvien WHERE masv = ?";

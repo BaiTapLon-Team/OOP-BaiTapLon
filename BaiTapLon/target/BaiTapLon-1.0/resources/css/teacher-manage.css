@@ -11,11 +11,11 @@
     margin-right: 15px;
 }
 
-/*.footer {*/
-/*    width: calc(100% - 250px);*/
-/*    position: fixed;*/
-/*    bottom: 0;*/
-/*}*/
+.footer {
+    width: calc(100% - 250px);
+    position: fixed;
+    bottom: 0;
+}
 
 .content {
     width: calc(100% - 40px);

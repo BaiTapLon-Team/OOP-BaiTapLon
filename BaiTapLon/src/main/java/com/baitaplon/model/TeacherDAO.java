@@ -30,12 +30,7 @@ public class TeacherDAO implements Management {
         return teacher;
     }
 
-    public List getList() {
-        return null;
-    }
-
-    public List getListTeacher(int limit, int offset) throws SQLException {
-        String sql = "select * from giaovien  ORDER BY magv OFFSET  ? ROWS  FETCH NEXT ? ROWS ONLY ";
+    public List getList(String sql, int limit, int offset) throws SQLException {
         PreparedStatement preparedStatement = connection.prepareStatement(sql);
         preparedStatement.setInt(2, limit);
         preparedStatement.setInt(1, offset);
@@ -61,7 +56,13 @@ public class TeacherDAO implements Management {
         return teacherList;
     }
 
-    public int countTeacher() throws SQLException, ClassNotFoundException {
+    public List getListTeacher(int limit, int offset) throws SQLException {
+        String sql = "select * from giaovien  ORDER BY magv OFFSET  ? ROWS  FETCH NEXT ? ROWS ONLY ";
+        List<Teacher> teacherList = getList(sql, limit, offset);
+        return teacherList;
+    }
+
+    public int countTeacher() throws SQLException {
         String sql = "SELECT COUNT(*) FROM giaovien";
         PreparedStatement preparedStatement = connection.prepareStatement(sql);
         ResultSet rs = preparedStatement.executeQuery();
@@ -111,8 +112,11 @@ public class TeacherDAO implements Management {
         connection.close();
     }
 
-    public List find(String args) {
-        return null;
+    public List find(String args, int limit, int offset) throws SQLException {
+        String sql = "select * from giaovien where name like N'%" + args + "%' or username like N'%" + args +
+                "%' or magv like N'%" + args + "%' ORDER BY magv OFFSET  ? ROWS  FETCH NEXT ? ROWS ONLY ";
+        List<Teacher> teacherList = getList(sql, limit, offset);
+        return teacherList;
     }
 
     public Object getInfo(String id) throws SQLException {

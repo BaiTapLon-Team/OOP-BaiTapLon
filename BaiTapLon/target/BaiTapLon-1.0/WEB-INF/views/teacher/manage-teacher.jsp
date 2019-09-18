@@ -40,7 +40,7 @@
             <div class="action">
                 <h1>Danh sách giáo viên</h1>
                 <a href="<c:url value="/manage-teacher/add-teacher"/> " class="add-content">Thêm mới</a>
-                <form action="#" class="search-from">
+                <form action="<c:url value="/manage-teacher/search"/> " class="search-from" method="get">
                     <input type="search" name="search" placeholder="Search records">
                     <input type="submit" name="submit" value="Search">
                 </form>

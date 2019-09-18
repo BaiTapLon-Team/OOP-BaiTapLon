@@ -118,4 +118,37 @@ public class ManagerTeacherController {
         modelAndView.setViewName("redirect:/manage-teacher");
         return modelAndView;
     }
+
+    @RequestMapping(value = {"/manage-teacher/search"}, method = RequestMethod.GET)
+    public ModelAndView search(HttpServletRequest request) {
+        String search = request.getParameter("search");
+        ModelAndView modelAndView = new ModelAndView();
+        List<Teacher> teachers = null;
+        String param = request.getParameter("page");
+        int totalPage = 0;  // Số trang
+        int recordPage = 10; // Số bản ghi trong một trang
+        int currPage = 1;  // Trang hiện tại.
+        if (param != null) {
+            currPage = Integer.parseInt(param);   // Chuyển trang khi người dùng ấn vào số trang ở dưới.
+        }
+        if(request.getSession().getAttribute("admin") == null) {
+            modelAndView.setViewName("redirect:/admin-login");
+        }
+        else {
+            TeacherDAO teacherDAO = new TeacherDAO();
+            try {
+                int count = teacherDAO.countTeacher();
+                teachers = teacherDAO.find(search,recordPage, recordPage * (currPage - 1));
+                totalPage = (int) Math.floor(count / recordPage) + 1;
+            } catch (Exception e) {
+                System.out.println("Can not get list teacher");
+                e.printStackTrace();
+            }
+        }
+        modelAndView.addObject("teachers", teachers);
+        modelAndView.setViewName("teacher/manage-teacher");
+        modelAndView.addObject("totalPage", totalPage);
+        modelAndView.addObject("currPage", currPage);
+        return  modelAndView;
+    }
 }

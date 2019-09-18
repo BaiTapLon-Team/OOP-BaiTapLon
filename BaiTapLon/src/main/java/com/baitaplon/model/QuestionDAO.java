@@ -18,6 +18,12 @@ public class QuestionDAO implements Management {
     private ResultSet resultSet = null;
 
     //Lấy 50 câu hỏi bất kì trong data Question
+
+    public List getList (String sql, int limit, int offset) {
+        return null;
+    }
+
+
     public List getList () {
         String sqlQuery = "SELECT * FROM question " +
                 "ORDER BY questionid " +
@@ -106,7 +112,7 @@ public class QuestionDAO implements Management {
         }
     }
 
-    public List find ( String args ) {
+    public List find ( String args, int limit, int offset ) {
         return null;
     }
 
