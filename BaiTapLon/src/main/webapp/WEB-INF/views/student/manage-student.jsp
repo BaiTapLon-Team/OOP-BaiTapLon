@@ -27,13 +27,15 @@
             <c:set var="name" value="${sessionScope.admin.name }"/>
             <c:if test="${ name != NULL }">
                 <a href="<c:url value="/admin/info"/>">Thông tin</a>
+                <a href="<c:url value="/manage-student"/> ">Sinh viên</a>
+                <a href="<c:url value="/manage-teacher"/> ">Giáo viên</a>
             </c:if>
             <c:if test="${ name == NULL }">
                 <a href="<c:url value="/teacher/info"/>">Thông tin</a>
+                <a href="<c:url value="/manage-student"/> ">Sinh viên</a>
             </c:if>
-            <a href="<c:url value="/manage-student"/> ">Sinh viên</a>
-            <a href="#">Câu hỏi</a>
-            <a href="#">Bảng điểm</a>
+            <a href="<c:url value="/teacher/list-question"/>">Câu hỏi</a>
+            <a href="<c:url value="/teacher/scores-table"/>">Bảng điểm</a>
         </div>
     </div>
     <div class="main">
@@ -45,7 +47,7 @@
             <div class="action">
                 <h1>Danh sách sinh viên</h1>
                 <a href="<c:url value="/manage-student/add-student"/> " class="add-content">Thêm mới</a>
-                <form action="#" class="search-from">
+                <form action="<c:url value="/manage-student/search"/>" class="search-from" method="get">
                     <input type="search" name="search" placeholder="Search records">
                     <input type="submit" name="submit" value="Search">
                 </form>
@@ -77,7 +79,7 @@
                         <td>${student.email}</td>
                         <td>${student.phone}</td>
                         <td>${student.magv}</td>
-                        <td><a href="<c:url value="/manage-student/edit?id=${student.id}"/> ">Sửa</a><a href="<c:url value="/manage-student/edit-delete?id=${student.id}"/> ">Xóa</a></td>
+                        <td><a class="action-ob" href="<c:url value="/manage-student/edit?id=${student.id}"/> ">Sửa</a><a class="action-ob" href="<c:url value="/manage-student/edit-delete?id=${student.id}"/> ">Xóa</a></td>
                     </tr>
                 </c:forEach>
             </table>

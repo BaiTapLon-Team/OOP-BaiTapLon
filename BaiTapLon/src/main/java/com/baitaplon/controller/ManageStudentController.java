@@ -117,4 +117,36 @@ public class ManageStudentController {
         modelAndView.setViewName("redirect:/manage-student");
         return modelAndView;
     }
+    @RequestMapping(value = {"/manage-student/search"}, method = RequestMethod.GET)
+    public ModelAndView search(HttpServletRequest request) {
+        ModelAndView modelAndView = new ModelAndView();
+        String search = request.getParameter("search");
+        List<Student> students = null;
+        String param = request.getParameter("page");
+        int totalPage = 0;  // Số trang
+        int recordPage = 10; // Số bản ghi trong một trang
+        int currPage = 1;  // Trang hiện tại.
+        if (param != null) {
+            currPage = Integer.parseInt(param);   // Chuyển trang khi người dùng ấn vào số trang ở dưới.
+        }
+        if(request.getSession().getAttribute("teacher") == null) {
+            modelAndView.setViewName("redirect:/teacher-login");
+        }
+        else {
+            StudentsDAO studentsDAO = new StudentsDAO();
+            try {
+                int count = studentsDAO.countStudent();
+                students = studentsDAO.find(search,recordPage, recordPage * (currPage - 1));
+                totalPage = (int) Math.floor(count / recordPage) + 1;
+            } catch (Exception e) {
+                System.out.println("Can not get list students");
+                e.printStackTrace();
+            }
+        }
+        modelAndView.addObject("students", students);
+        modelAndView.setViewName("student/manage-student");
+        modelAndView.addObject("totalPage", totalPage);
+        modelAndView.addObject("currPage", currPage);
+        return modelAndView;
+    }
 }

@@ -26,9 +26,17 @@
         <div class="logo"><a href="#">Giáo Viên</a></div>
         <div class="info"><i class="fal fa-user-circle"></i> ${teacher.name} </div>
         <div class="nav">
-            <a href="<c:url value="/teacher/info"/>">Thông tin</a>
-            <a href="<c:url value="/manage-student"/>">Sinh viên</a>
-            <a href="#">Câu hỏi</a>
+            <c:set var="name" value="${sessionScope.admin.name }"/>
+            <c:if test="${ name != NULL }">
+                <a href="<c:url value="/admin/info"/>">Thông tin</a>
+                <a href="<c:url value="/manage-student"/> ">Sinh viên</a>
+                <a href="<c:url value="/manage-teacher"/> ">Giáo viên</a>
+            </c:if>
+            <c:if test="${ name == NULL }">
+                <a href="<c:url value="/teacher/info"/>">Thông tin</a>
+                <a href="<c:url value="/manage-student"/> ">Sinh viên</a>
+            </c:if>
+            <a href="<c:url value="/teacher/list-question"/>">Câu hỏi</a>
             <a href="<c:url value="/teacher/scores-table"/>">Bảng điểm</a>
         </div>
     </div>
