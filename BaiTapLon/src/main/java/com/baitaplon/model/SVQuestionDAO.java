@@ -127,8 +127,8 @@ public class SVQuestionDAO {
     }
 
     public void updateScores(String studentID, int scores) {
-        String sqlRequest = "INSERT INTO scores\n" +
-                "SET scores = "+scores+"\n" +
+        String sqlRequest = "UPDATE dbo.scores \n" +
+                "SET scores = "+scores+" \n" +
                 "WHERE  masv = '"+studentID+"'";;
         try {
             preparedStatement = connection.prepareStatement(sqlRequest);
