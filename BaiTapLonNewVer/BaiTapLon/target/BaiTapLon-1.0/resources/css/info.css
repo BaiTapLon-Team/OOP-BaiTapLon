@@ -1,0 +1,48 @@
+#titel-info {
+    text-align: center;
+}
+
+#box-info {
+    padding: 25px 50px;
+}
+
+.info {
+    padding: 10px;
+    font-size: 22px;
+}
+
+.info label {
+    display: inline-block;
+    width: 250px;
+}
+
+.info input[type = text] {
+    width: calc(100% - 300px);
+    font-size: 20px;
+    padding: 10px;
+    box-sizing: border-box;
+    border: 0;
+    border: 1px solid #bdc3c7;
+    border-radius: 5px;
+    font-family: Comfortaa-Bold;
+}
+
+.info input[type = text]:disabled {
+    background-color: #ecf0f1;
+}
+
+.save-info {
+    text-align: center;
+    margin: 30px 0 0 0;
+}
+
+.save-info input {
+    padding: 10px;
+    background: #2980b9;
+    border: 0;
+    outline: 0;
+    font-size: 20px;
+    border-radius: 5px;
+    font-family: Comfortaa-Bold;
+    color: #fff;
+}

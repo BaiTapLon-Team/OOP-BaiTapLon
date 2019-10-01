@@ -48,7 +48,6 @@
         <div class="content">
             <div class="action">
                 <h1>Danh sách câu hỏi</h1>
-
                 <button onclick="showModal()" class="add-content">Thêm mới</button>
             </div>
             <form method="post" action="#">

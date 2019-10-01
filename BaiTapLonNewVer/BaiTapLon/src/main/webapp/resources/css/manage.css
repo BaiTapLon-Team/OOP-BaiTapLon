@@ -1,0 +1,91 @@
+
+
+.action {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.action h1 {
+    font-size: 30px;
+    margin: 0;
+    margin-right: auto;
+}
+
+.action .btn-primary {
+    margin-right: 20px;
+}
+
+.main {
+    min-height: 85vh;
+    padding: 50px;
+}
+
+.table {
+    margin-top: 40px;
+    border: 1px solid #0000001a;
+    text-align: center;
+}
+
+.table-hover tbody tr:hover {
+    background-color: rgba(0, 0, 0, 0.15);
+}
+
+.table td, .table th {
+    vertical-align: unset;
+    padding: 5px 3px;
+}
+
+.action-ob {
+    display: inline-block;
+    background-color: #d63031;
+    padding: 5px;
+    text-decoration: none;
+    color: #fff;
+    border-radius: 5px;
+    margin: 0px 2.5px;
+    border: 0;
+}
+
+.action-ob:hover {
+    background-color: #c51a1a;
+    color: #fff;
+}
+
+.action-ob:first-child {
+    /* margin-right: 5px; */
+    background-color:#0984e3;
+}
+
+.action-ob:first-child:hover {
+    background-color:#0778ce;
+}
+
+.modal-content form {
+    padding: 20px;
+}
+
+.form-control {
+    display: inline-block;
+    width: calc(100% - 210px);
+}
+
+.col-form-label {
+    width: 190px;
+}
+
+@media (max-width: 768px) {
+    .action {
+        flex-direction: column;
+    }
+
+    .action h1 {
+        font-size: 30px;
+        margin: 0;
+        text-align: center;
+    }
+
+    .action .btn-primary {
+        margin-right: 0;
+    }
+}
