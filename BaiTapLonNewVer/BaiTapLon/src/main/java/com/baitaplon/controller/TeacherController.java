@@ -2,15 +2,18 @@ package com.baitaplon.controller;
 
 import com.baitaplon.model.QuestionDAO;
 import com.baitaplon.model.SVQuestionDAO;
+import com.baitaplon.model.StudentsDAO;
 import com.baitaplon.model.TeacherDAO;
 import com.baitaplon.objects.Question;
 import com.baitaplon.objects.SVQuestion;
+import com.baitaplon.objects.Student;
 import com.baitaplon.objects.Teacher;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
 import javax.servlet.http.HttpServletRequest;
@@ -127,5 +130,37 @@ public class TeacherController {
             ex.printStackTrace();
             return "redirect:/teacher/info";
         }
+    }
+
+    @RequestMapping(value = {"/teacher/editPass"}, method = RequestMethod.GET)
+    public ModelAndView editPassword(@ModelAttribute(name = "error") String error) {
+        ModelAndView modelAndView = new ModelAndView();
+        modelAndView.addObject("error", error);
+        modelAndView.setViewName("teacher/editPassword");
+        return modelAndView;
+    }
+
+    @RequestMapping(value = {"/teacher/editPassPost"}, method = RequestMethod.POST)
+    public ModelAndView editPassword(@RequestParam(name = "password") String password,
+                                     @RequestParam(name = "newpass") String newpass, HttpServletRequest request) {
+        ModelAndView modelAndView = new ModelAndView();
+        Teacher user = (Teacher) request.getSession().getAttribute("teacher");
+        TeacherDAO teacherDAO = new TeacherDAO();
+        String error;
+        try {
+            if(teacherDAO.editPass(user.getUsername(), password, newpass)) {
+                error = "Đổi mật khẩu thành công";
+                modelAndView.addObject("error", error);
+                modelAndView.setViewName("redirect:/teacher/editPass");
+            }
+            else {
+                error = "Mật khẩu cũ không chính xác";
+                modelAndView.addObject("error", error);
+                modelAndView.setViewName("redirect:/teacher/editPass");
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return modelAndView;
     }
 }

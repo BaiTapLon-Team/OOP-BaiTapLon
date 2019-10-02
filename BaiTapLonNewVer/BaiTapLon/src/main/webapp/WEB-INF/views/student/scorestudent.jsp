@@ -129,7 +129,7 @@
                 <a href="<c:url value="/sinhvien/bang-diem"/> ">Xem lại bài làm</a>
             </li>
             <li>
-                <a href="#">Đổi mật khẩu</a>
+                <a href="<c:url value="/student/editPass"/>">Đổi mật khẩu</a>
             </li>
             <li>
                 <a href="#">Hỗ trợ</a>

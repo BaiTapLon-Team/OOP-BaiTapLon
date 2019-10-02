@@ -66,7 +66,7 @@
                 <a href="<c:url value="/teacher/scores-table"/>">Bảng điểm sinh viên</a>
             </li>
             <li>
-                <a href="#">Đổi mật khẩu</a>
+                <a href="<c:url value="/admin/editPass"/>">Đổi mật khẩu</a>
             </li>
             <li>
                 <a href="#">Hỗ trợ</a>
@@ -100,7 +100,7 @@
             <div class="view-info">
                 <h1 id="titel-info">Thêm mới giáo viên</h1>
                 <c:url value="/manage-teacher/add-teacher" var="url"/>
-                <form:form action="${url}" id="box-info" modelAttribute="teacher" method="post">
+                <form:form action="${url}" id="box-info" modelAttribute="teacher" onsubmit="return validateForm()" method="post">
                     <div class="info">
                         <label for="magv">Mã giáo viên</label>
                         <form:input type="text" id="magv" path="id"
@@ -152,6 +152,7 @@
                         <form:input type="text" id="coefficientsSalary" path="coefficientsSalary"
                                name="coefficientsSalary" />
                     </div>
+                    <div id="error"></div>
                     <div class="save-info">
                         <input type="submit" value="Lưu thay đổi">
                     </div>
@@ -190,6 +191,16 @@
             $('a[aria-expanded=true]').attr('aria-expanded', 'false');
         });
     });
+
+    function validateForm() {
+        for (var i = 0; i < 9; i++) {
+            var x = document.forms[0][i].value;
+            if (x == "") {
+                document.getElementById("error").innerHTML = "Vui lòng điền đầy đủ các trường thông tin";
+                return false;
+            }
+        }
+    }
 </script>
 </body>
 

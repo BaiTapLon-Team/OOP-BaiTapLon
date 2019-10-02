@@ -144,4 +144,21 @@ public class TeacherDAO implements Management {
         return teacher;
     }
 
+    public boolean editPass(String user, String pass, String newPass) throws SQLException {
+        String sql = "Select * from giaovien where username = ? and password = ?";
+        PreparedStatement preparedStatement = connection.prepareStatement(sql);
+        preparedStatement.setString(1, user);
+        preparedStatement.setString(2, pass);
+        ResultSet rs = preparedStatement.executeQuery();
+        if(rs.next()) {
+            sql = "UPDATE giaovien SET password = ? where username = ?";
+            PreparedStatement preparedStatement1 = connection.prepareStatement(sql);
+            preparedStatement1.setString(1, newPass);
+            preparedStatement1.setString(2, user);
+            int rs1 = preparedStatement1.executeUpdate();
+            return true;
+        }
+        return false;
+    }
+
 }

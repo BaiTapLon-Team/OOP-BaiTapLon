@@ -61,25 +61,33 @@
                 <li>
                     <a href="<c:url value="/manage-teacher"/>">Quản lý giáo viên</a>
                 </li>
+                <li class="active">
+                    <a href="<c:url value="/teacher/list-question"/>">Danh sách câu hỏi</a>
+                </li>
+                <li >
+                    <a href="<c:url value="/teacher/scores-table"/>">Bảng điểm sinh viên</a>
+                </li>
+                <li>
+                    <a href="<c:url value="/admin/editPass"/>">Đổi mật khẩu</a>
+                </li>
             </c:if>
             <c:if test="${ name == NULL }">
-                <p>${sessionScope.teacher.name }</p>
-                <li>
-                    <a href="<c:url value="/teacher/info"/>">Thông tin cá nhân</a>
-                </li>
-                <li>
-                    <a href="<c:url value="/manage-student"/>">Quản lý sinh viên</a>
-                </li>
-            </c:if>
-            <li  class="active">
+            <p>${sessionScope.teacher.name }</p>
+            <li>
+                <a href="<c:url value="/teacher/info"/>">Thông tin cá nhân</a>
+            </li>
+            <li >
+                <a href="<c:url value="/manage-student"/>">Quản lý sinh viên</a>
+            </li>
+            <li class="active">
                 <a href="<c:url value="/teacher/list-question"/>">Danh sách câu hỏi</a>
             </li>
             <li>
                 <a href="<c:url value="/teacher/scores-table"/>">Bảng điểm sinh viên</a>
             </li>
             <li>
-                <a href="#">Đổi mật khẩu</a>
-            </li>
+                <a href="<c:url value="/teacher/editPass"/>">Đổi mật khẩu</a>
+                </c:if>
             <li>
                 <a href="#">Hỗ trợ</a>
             </li>
@@ -112,7 +120,8 @@
             <div class="action">
                 <h1>Danh sách câu hỏi</h1>
                 <button type="button" class="btn btn-primary" data-toggle="modal"
-                        data-target=".bd-example-modal-lg">Thêm mới</button>
+                        data-target=".bd-example-modal-lg">Thêm mới
+                </button>
                 <form class="form-inline" action="#" method="GET">
                     <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
                     <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
@@ -125,15 +134,19 @@
                         <input type="hidden" name="questionID${index}" value="${questionList[index].questionID}">
                         <div class="content-question">
                             <h2>Câu ${index+1}: ${questionList[index].content}?</h2>
-                            <button type="button"
-                                    onclick="ModalEditQuestion('${questionList[index].questionID}', '${questionList[index].content}', '${questionList[index].correct}','${questionList[index].anwserA}', '${questionList[index].anwserB}', '${questionList[index].anwserC}', '${questionList[index].anwserD}')"
-                                    data-toggle="modal" data-target=".bd-editQuestion-modal-lg">Sửa</button>
-                            <a href="<c:url value="/teacher/list-question/delete?id=${questionList[index].questionID}"/>" onclick="confirm('Bạn thật sự muốn xóa câu này')">Xóa</a>
+                            <div style="display: flex">
+                                <button type="button"
+                                        onclick="ModalEditQuestion('${questionList[index].questionID}', '${questionList[index].content}', '${questionList[index].correct}','${questionList[index].anwserA}', '${questionList[index].anwserB}', '${questionList[index].anwserC}', '${questionList[index].anwserD}')"
+                                        data-toggle="modal" data-target=".bd-editQuestion-modal-lg">Sửa
+                                </button>
+                                <a href="<c:url value="/teacher/list-question/delete?id=${questionList[index].questionID}"/>"
+                                   onclick="confirm('Bạn thật sự muốn xóa câu này')">Xóa</a>
+                            </div>
                         </div>
-                        <h3>A.  ${questionList[index].anwserA}</h3>
-                        <h3>B.  ${questionList[index].anwserB}</h3>
-                        <h3>C.  ${questionList[index].anwserC}</h3>
-                        <h3>D.  ${questionList[index].anwserD}</h3>
+                        <h3>A. ${questionList[index].anwserA}</h3>
+                        <h3>B. ${questionList[index].anwserB}</h3>
+                        <h3>C. ${questionList[index].anwserC}</h3>
+                        <h3>D. ${questionList[index].anwserD}</h3>
                     </div>
                 </c:forEach>
             </c:if>
@@ -160,23 +173,23 @@
                     </div>
                     <div class="form-group">
                         <label for="correct" class="col-form-label">Đáp án đúng</label>
-                        <form:input class="form-control" type="text" name="correct" id="correct" path="correct" />
+                        <form:input class="form-control" type="text" name="correct" id="correct" path="correct"/>
                     </div>
                     <div class="form-group">
                         <label for="answer_a" class="col-form-label">Đáp án A</label>
-                        <form:input class="form-control" type="text" name="answer_a" id="answer_a" path="anwserA" />
+                        <form:input class="form-control" type="text" name="answer_a" id="answer_a" path="anwserA"/>
                     </div>
                     <div class="form-group">
                         <label for="answer_b" class="col-form-label">Đáp án B</label>
-                        <form:input class="form-control" type="text" name="answer_b" id="answer_b" path="anwserB" />
+                        <form:input class="form-control" type="text" name="answer_b" id="answer_b" path="anwserB"/>
                     </div>
                     <div class="form-group">
                         <label for="answer_c" class="col-form-label">Đáp án C</label>
-                        <form:input class="form-control" type="text" name="answer_c" id="answer_c" path="anwserC" />
+                        <form:input class="form-control" type="text" name="answer_c" id="answer_c" path="anwserC"/>
                     </div>
                     <div class="form-group">
                         <label for="answer_d" class="col-form-label">Đáp án D</label>
-                        <form:input class="form-control" type="text" name="answer_d" id="answer_d" path="anwserD" />
+                        <form:input class="form-control" type="text" name="answer_d" id="answer_d" path="anwserD"/>
                     </div>
                     <input type="submit" id="submit" value="submit" style="display: none">
                 </form:form>
@@ -202,7 +215,7 @@
             </div>
             <div class="modal-body">
                 <form action="<c:url value="/teacher/list-question/edit"/>" method="GET">
-                    <input hidden id="questionID" type="hidden" name="questionID" />
+                    <input hidden id="questionID" type="hidden" name="questionID"/>
                     <div class="form-group">
                         <label for="content-qs_" class="col-form-label">Nội dung câu hỏi</label>
                         <textarea class="form-control" name="content" id="content-qs_"></textarea>
@@ -239,6 +252,7 @@
 </div>
 <script type="text/javascript">
     var modalEdit = document.getElementsByClassName("modal")[0];
+
     function ModalEditQuestion(questionId, content, correct, answer_a, answer_b, answer_c, answer_d) {
         document.getElementById("questionID").value = questionId;
         document.getElementById("content-qs_").value = content;
@@ -248,11 +262,15 @@
         document.getElementById("answer_c_").value = answer_c;
         document.getElementById("answer_d_").value = answer_d;
     }
+
     var x = document.getElementById("submit");
+
     function submit() {
         x.click();
     }
+
     var y = document.getElementById("submit1");
+
     function submit1() {
         y.click();
     }

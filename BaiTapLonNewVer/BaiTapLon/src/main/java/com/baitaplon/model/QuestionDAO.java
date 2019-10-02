@@ -2,6 +2,7 @@ package com.baitaplon.model;
 
 import com.baitaplon.objects.Question;
 import com.baitaplon.objects.SQuestion;
+import com.baitaplon.objects.Student;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -18,11 +19,6 @@ public class QuestionDAO implements Management {
     private ResultSet resultSet = null;
 
     //Lấy 50 câu hỏi bất kì trong data Question
-
-    public List getList (String sql, int limit, int offset) {
-        return null;
-    }
-
 
     public List getList () {
         String sqlQuery = "SELECT * FROM question " +
@@ -113,7 +109,10 @@ public class QuestionDAO implements Management {
     }
 
     public List find ( String args, int limit, int offset ) {
-        return null;
+        String sql = "select * from sinhvien where name like N'%" + args + "%' or username like N'%" + args +
+                "%' or masv like N'%" + args + "%' ORDER BY masv OFFSET  ? ROWS  FETCH NEXT ? ROWS ONLY ";
+        List<Student> listQuestion = getList(sql, limit, offset);
+        return listQuestion;
     }
 
     //Lấy thông tin của một câu hỏi theo id câu hỏi
@@ -141,84 +140,7 @@ public class QuestionDAO implements Management {
         }
     }
 
-//    //Thêm vào bảng sv_question 1 câu trả lời của 1 sinh viên
-//    public void addSV_Question( String studentID, int questionID, String answer ) {
-//        String sqlRequest = "INSERT INTO dbo.sv_question\n" +
-//                "(\n" +
-//                "    masv,\n" +
-//                "    questionid,\n" +
-//                "    answer\n" +
-//                ")\n" +
-//                "VALUES\n" +
-//                "(   '"+studentID+"', -- masv - varchar(50)\n" +
-//                "    "+questionID+",  -- questionid - int\n" +
-//                "    N'"+answer+"' -- answer - nvarchar(100)\n" +
-//                ")";
-//        try {
-//            preparedStatement = connection.prepareStatement(sqlRequest);
-//            preparedStatement.executeUpdate();
-//            System.out.println("insert sv_question successfuly");
-//        }catch (Exception ex) {
-//            System.out.println("insert sv_question Fail");
-//            ex.printStackTrace();
-//        }
-//    }
-//
-//    //Thêm vào bảng sv_question 50 câu trả lời của 1 sinh viên
-//    public void addSV_Questions( String studentID, Map<Integer, String> answers) {
-//        for(Integer key : answers.keySet()) {
-//            addSV_Question(studentID, key, answers.get(key));
-//        }
-//    }
-//
-//    //Lấy kết quả thi ra từ bẳng
-//    public  int getScores(String studentID) {
-//        int scores = 0;
-//        String sqlRequest = "SELECT COUNT(*) FROM dbo.question INNER JOIN dbo.sv_question\n" +
-//                "ON sv_question.questionid = question.questionid AND masv = '"+studentID+"' AND answer = correct";
-//        try {
-//            preparedStatement = connection.prepareStatement(sqlRequest);
-//            resultSet = preparedStatement.executeQuery();
-//            if(resultSet.next()) {
-//                scores = resultSet.getInt(1);
-//            }
-//            System.out.println("get Scores Susscess");
-//            return  scores;
-//        }catch (Exception ex) {
-//            ex.printStackTrace();
-//            System.out.println("get Scores fail");
-//            return scores;
-//        }
-//    }
-//
-//    public List getAnswerList( String studentID) {
-//        List<SQuestion> sQuestionList = new ArrayList<SQuestion>();
-//        String sqlRequest = "SELECT masv, sv_question.questionid, content, answer, correct FROM dbo.question INNER JOIN dbo.sv_question\n" +
-//                "ON sv_question.questionid = question.questionid AND masv = '"+studentID+"'";
-//        try {
-//            preparedStatement = connection.prepareStatement(sqlRequest);
-//            resultSet = preparedStatement.executeQuery();
-//            while (resultSet.next()) {
-//                SQuestion sQuestion = new SQuestion();
-//                sQuestion.setStudentID(resultSet.getString("masv"));
-//                sQuestion.setQuestionID(resultSet.getInt("questionid"));
-//                sQuestion.setContent(resultSet.getString("content"));
-//                sQuestion.setAnswer(resultSet.getString("answer"));
-//                sQuestion.setCorrect(resultSet.getString("correct"));
-//                sQuestionList.add(sQuestion);
-//            }
-//            return  sQuestionList;
-//        }catch (Exception ex) {
-//            ex.printStackTrace();
-//            System.out.println("get list answer fail");
-//            return sQuestionList;
-//        }
-//    }
-
-
-
-//    public static void main(String args[]) {
-//        int score = new QuestionDAO().getScores("AT140216");
-//        System.out.println(score);
-//    }
+    public List getList (String sql, int limit, int offset) {
+        return null;
+    }
 }

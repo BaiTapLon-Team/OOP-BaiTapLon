@@ -56,7 +56,7 @@
                 <a href="<c:url value="/teacher/scores-table"/>">Bảng điểm sinh viên</a>
             </li>
             <li>
-                <a href="#">Đổi mật khẩu</a>
+                <a href="<c:url value="/teacher/editPass"/> ">Đổi mật khẩu</a>
             </li>
             <li>
                 <a href="#">Hỗ trợ</a>
@@ -126,8 +126,8 @@
                         <form:input type="text" id="qualifications" path="qualifications"  value="${ teacher.qualifications.trim() }" name="qualifications"/>
                     </div>
                     <div class="info">
-                        <label for="coefficientsSalary">Hệ số lương</label>
-                        <form:input type="text" id="coefficientsSalary" path="coefficientsSalary"  disabled="true" value="${ teacher.coefficientsSalary }" name="coefficientsSalary"/>
+                        <label for="coefficientsSalary">Lương</label>
+                        <form:input type="text" id="coefficientsSalary" path="coefficientsSalary"  disabled="true" value="${ teacher.payroll() }" name="coefficientsSalary"/>
                     </div>
                     <div class="save-info">
                         <input type="submit" value="Lưu thay đổi">

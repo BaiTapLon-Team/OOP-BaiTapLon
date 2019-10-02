@@ -31,6 +31,10 @@ public class Teacher extends Person {
         this.coefficientsSalary = coefficientsSalary;
     }
 
+    public int payroll() {
+        return (int)(coefficientsSalary*1200000);
+    }
+
     @Override
     public String toString() {
         String father = super.toString();

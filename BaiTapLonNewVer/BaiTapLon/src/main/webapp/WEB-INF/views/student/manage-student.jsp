@@ -60,16 +60,24 @@
                 <li>
                     <a href="<c:url value="/manage-teacher"/>">Quản lý giáo viên</a>
                 </li>
+                <li>
+                    <a href="<c:url value="/teacher/list-question"/>">Danh sách câu hỏi</a>
+                </li>
+                <li >
+                    <a href="<c:url value="/teacher/scores-table"/>">Bảng điểm sinh viên</a>
+                </li>
+                <li>
+                    <a href="<c:url value="/admin/editPass"/>">Đổi mật khẩu</a>
+                </li>
             </c:if>
             <c:if test="${ name == NULL }">
-                <p>${sessionScope.teacher.name }</p>
-                <li>
-                    <a href="<c:url value="/teacher/info"/>">Thông tin cá nhân</a>
-                </li>
-                <li class="active">
-                    <a href="<c:url value="/manage-student"/>">Quản lý sinh viên</a>
-                </li>
-            </c:if>
+            <p>${sessionScope.teacher.name }</p>
+            <li>
+                <a href="<c:url value="/teacher/info"/>">Thông tin cá nhân</a>
+            </li>
+            <li class="active">
+                <a href="<c:url value="/manage-student"/>">Quản lý sinh viên</a>
+            </li>
             <li>
                 <a href="<c:url value="/teacher/list-question"/>">Danh sách câu hỏi</a>
             </li>
@@ -77,8 +85,8 @@
                 <a href="<c:url value="/teacher/scores-table"/>">Bảng điểm sinh viên</a>
             </li>
             <li>
-                <a href="#">Đổi mật khẩu</a>
-            </li>
+                <a href="<c:url value="/teacher/editPass"/>">Đổi mật khẩu</a>
+                </c:if>
             <li>
                 <a href="#">Hỗ trợ</a>
             </li>

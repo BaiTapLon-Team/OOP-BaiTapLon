@@ -49,31 +49,39 @@
                 <li>
                     <a href="<c:url value="/admin/info"/>">Thông tin cá nhân</a>
                 </li>
-                <li class="active">
+                <li>
                     <a href="<c:url value="/manage-student"/>">Quản lý sinh viên</a>
                 </li>
                 <li>
                     <a href="<c:url value="/manage-teacher"/>">Quản lý giáo viên</a>
                 </li>
-            </c:if>
-            <c:if test="${ name == NULL }">
-                <p>${sessionScope.teacher.name }</p>
                 <li>
-                    <a href="<c:url value="/teacher/info"/>">Thông tin cá nhân</a>
+                    <a href="<c:url value="/teacher/list-question"/>">Danh sách câu hỏi</a>
                 </li>
                 <li class="active">
-                    <a href="<c:url value="/manage-student"/>">Quản lý sinh viên</a>
+                    <a href="<c:url value="/teacher/scores-table"/>">Bảng điểm sinh viên</a>
+                </li>
+                <li>
+                    <a href="<c:url value="/admin/editPass"/>">Đổi mật khẩu</a>
                 </li>
             </c:if>
+            <c:if test="${ name == NULL }">
+            <p>${sessionScope.teacher.name }</p>
+            <li>
+                <a href="<c:url value="/teacher/info"/>">Thông tin cá nhân</a>
+            </li>
+            <li class="active">
+                <a href="<c:url value="/manage-student"/>">Quản lý sinh viên</a>
+            </li>
             <li>
                 <a href="<c:url value="/teacher/list-question"/>">Danh sách câu hỏi</a>
             </li>
-            <li>
+            <li class="active">
                 <a href="<c:url value="/teacher/scores-table"/>">Bảng điểm sinh viên</a>
             </li>
             <li>
-                <a href="#">Đổi mật khẩu</a>
-            </li>
+                <a href="<c:url value="/teacher/editPass"/>">Đổi mật khẩu</a>
+                </c:if>
             <li>
                 <a href="#">Hỗ trợ</a>
             </li>
@@ -104,7 +112,7 @@
             <div class="view-info">
                 <h1 id="titel-info">Thêm mới sinh viên</h1>
                 <c:url value="/manage-student/add-student" var="url"/>
-                <form:form action="${url}" id="box-info" modelAttribute="student" method="post">
+                <form:form action="${url}" id="box-info" modelAttribute="student"  onsubmit="return validateForm()" method="post">
                     <div class="info">
                         <label for="masv">Mã sinh viên</label>
                         <form:input type="text" id="masv"  path="id" />
@@ -145,6 +153,7 @@
                         <label for="magv">Giáo viên quản lý</label>
                         <form:input type="text" id="magv" path="magv" />
                     </div>
+                    <div id="error"></div>
                     <div class="save-info">
                         <input type="submit" value="Lưu thay đổi">
                     </div>
@@ -176,6 +185,16 @@
             $('a[aria-expanded=true]').attr('aria-expanded', 'false');
         });
     });
+
+    function validateForm() {
+        for (var i = 0; i < 9; i++) {
+            var x = document.forms[0][i].value;
+            if (x == "") {
+                document.getElementById("error").innerHTML = "Vui lòng điền đầy đủ các trường thông tin";
+                return false;
+            }
+        }
+    }
 </script>
 </body>
 

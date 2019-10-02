@@ -65,7 +65,7 @@
                 <a href="<c:url value="/teacher/scores-table"/>">Bảng điểm sinh viên</a>
             </li>
             <li>
-                <a href="#">Đổi mật khẩu</a>
+                <a href="<c:url value="/admin/editPass"/>">Đổi mật khẩu</a>
             </li>
             <li>
                 <a href="#">Hỗ trợ</a>

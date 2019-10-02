@@ -139,11 +139,20 @@ public class StudentsDAO implements Management {
         return student;
     }
 
-    public void addScores(String idSV, Map svQuestion) {
-
-    }
-
-    public Map showAwnser(String id) {
-        return new HashMap();
+    public boolean editPass(String user, String pass, String newPass) throws SQLException {
+        String sql = "Select * from sinhvien where username = ? and password = ?";
+        PreparedStatement preparedStatement = connection.prepareStatement(sql);
+        preparedStatement.setString(1, user);
+        preparedStatement.setString(2, pass);
+        ResultSet rs = preparedStatement.executeQuery();
+        if(rs.next()) {
+            sql = "UPDATE sinhvien SET password = ? where username = ?";
+            PreparedStatement preparedStatement1 = connection.prepareStatement(sql);
+            preparedStatement1.setString(1, newPass);
+            preparedStatement1.setString(2, user);
+            int rs1 = preparedStatement1.executeUpdate();
+            return true;
+        }
+        return false;
     }
 }
