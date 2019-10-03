@@ -55,7 +55,7 @@ CREATE TABLE sinhvien (
 	magv VARCHAR(50), 
 	gender NVARCHAR(10),
 	email VARCHAR(50),
-	Constraint fk_magv foreign key(magv) references giaovien(magv) ON DELETE CASCADE
+	Constraint fk_magv foreign key(magv) references giaovien(magv) ON DELETE SET NULL
 )
 
 insert into sinhvien
