@@ -9,7 +9,7 @@ public class ConnectDatabase {
 //    private String userNameSQL = "sa";
 //    private String passWordSQL = "Vanhajvst123";
 
-    private String dbURL = "jdbc:sqlserver://DUY_PHUC:1433;databaseName=BAITAPLONTest";
+    private String dbURL = "jdbc:sqlserver://DUY_PHUC:1433;databaseName=BAITAPLON";
     private String userNameSQL = "sa";
     private String passWordSQL = "123";
 

@@ -70,6 +70,31 @@ public class TeacherDAO implements Management {
         return rs.getInt(1);
     }
 
+    public int validate(Teacher teacher) throws SQLException {
+        String sql = "Select * from giaovien where magv = ?";
+        PreparedStatement preparedStatement = connection.prepareStatement(sql);
+        preparedStatement.setString(1, teacher.getId());
+        ResultSet rs = preparedStatement.executeQuery();
+        if(rs.next()) {
+            String sql1 = "Select * from giaovien where username = ?";
+            PreparedStatement preparedStatement1 = connection.prepareStatement(sql1);
+            preparedStatement1.setString(1, teacher.getUsername());
+            ResultSet rs1 = preparedStatement1.executeQuery();
+            if(rs1.next()) {
+                return 3;
+            }
+            return 2;
+        }
+        String sql1 = "Select * from giaovien where username = ?";
+        PreparedStatement preparedStatement1 = connection.prepareStatement(sql1);
+        preparedStatement1.setString(1, teacher.getUsername());
+        ResultSet rs1 = preparedStatement1.executeQuery();
+        if(rs1.next()) {
+            return 1;
+        }
+        return 0;
+    }
+
     public void add(Object object) throws SQLException {
         Teacher teacher = (Teacher) object;
         String sql = "INSERT INTO giaovien values(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";

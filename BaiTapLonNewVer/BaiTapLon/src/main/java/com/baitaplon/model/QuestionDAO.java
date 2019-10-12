@@ -49,6 +49,32 @@ public class QuestionDAO implements Management {
         }
     }
 
+    public List getListQuestionTeacher () {
+        String sqlQuery = "SELECT * FROM question ";
+        List<Question> questionList = new ArrayList<Question>();
+        try {
+            preparedStatement = connection.prepareStatement(sqlQuery);
+            resultSet = preparedStatement.executeQuery();
+            while (resultSet.next()) {
+                Question questionTemp = new Question();
+                questionTemp.setQuestionID(resultSet.getInt("questionid"));
+                questionTemp.setContent(resultSet.getString("content"));
+                questionTemp.setCorrect(resultSet.getString("correct"));
+                questionTemp.setAnwserA(resultSet.getString("answer_a"));
+                questionTemp.setAnwserB(resultSet.getString("answer_b"));
+                questionTemp.setAnwserC(resultSet.getString("answer_c"));
+                questionTemp.setAnwserD(resultSet.getString("answer_d"));
+                questionList.add(questionTemp);
+            }
+            System.out.println("Get Question List Successfuly");
+            return questionList;
+        }catch (Exception ex) {
+            System.out.println("Get Question List Fail");
+            ex.printStackTrace();
+            return null;
+        }
+    }
+
     //Thêm câu hỏi vào database
     public void add ( Object questionObject ) {
         //Chuyển đổi Object sang Question
@@ -108,11 +134,30 @@ public class QuestionDAO implements Management {
         }
     }
 
-    public List find ( String args, int limit, int offset ) {
-        String sql = "select * from sinhvien where name like N'%" + args + "%' or username like N'%" + args +
-                "%' or masv like N'%" + args + "%' ORDER BY masv OFFSET  ? ROWS  FETCH NEXT ? ROWS ONLY ";
-        List<Student> listQuestion = getList(sql, limit, offset);
-        return listQuestion;
+    public List find (String search) {
+        String sqlQuery = "SELECT * FROM question where content like '%"+search+"%'";
+        List<Question> questionList = new ArrayList<Question>();
+        try {
+            preparedStatement = connection.prepareStatement(sqlQuery);
+            resultSet = preparedStatement.executeQuery();
+            while (resultSet.next()) {
+                Question questionTemp = new Question();
+                questionTemp.setQuestionID(resultSet.getInt("questionid"));
+                questionTemp.setContent(resultSet.getString("content"));
+                questionTemp.setCorrect(resultSet.getString("correct"));
+                questionTemp.setAnwserA(resultSet.getString("answer_a"));
+                questionTemp.setAnwserB(resultSet.getString("answer_b"));
+                questionTemp.setAnwserC(resultSet.getString("answer_c"));
+                questionTemp.setAnwserD(resultSet.getString("answer_d"));
+                questionList.add(questionTemp);
+            }
+            System.out.println("Search Question List Successfuly");
+            return questionList;
+        }catch (Exception ex) {
+            System.out.println("Search Question List Fail");
+            ex.printStackTrace();
+            return null;
+        }
     }
 
     //Lấy thông tin của một câu hỏi theo id câu hỏi
@@ -141,6 +186,10 @@ public class QuestionDAO implements Management {
     }
 
     public List getList (String sql, int limit, int offset) {
+        return null;
+    }
+
+    public List find(String args, int limit, int offset) throws SQLException {
         return null;
     }
 }

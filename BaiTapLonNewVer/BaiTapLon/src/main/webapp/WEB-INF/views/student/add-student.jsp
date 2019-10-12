@@ -49,7 +49,7 @@
                 <li>
                     <a href="<c:url value="/admin/info"/>">Thông tin cá nhân</a>
                 </li>
-                <li>
+                <li class="active">
                     <a href="<c:url value="/manage-student"/>">Quản lý sinh viên</a>
                 </li>
                 <li>
@@ -58,7 +58,7 @@
                 <li>
                     <a href="<c:url value="/teacher/list-question"/>">Danh sách câu hỏi</a>
                 </li>
-                <li class="active">
+                <li >
                     <a href="<c:url value="/teacher/scores-table"/>">Bảng điểm sinh viên</a>
                 </li>
                 <li>
@@ -76,7 +76,7 @@
             <li>
                 <a href="<c:url value="/teacher/list-question"/>">Danh sách câu hỏi</a>
             </li>
-            <li class="active">
+            <li>
                 <a href="<c:url value="/teacher/scores-table"/>">Bảng điểm sinh viên</a>
             </li>
             <li>
@@ -153,7 +153,7 @@
                         <label for="magv">Giáo viên quản lý</label>
                         <form:input type="text" id="magv" path="magv" />
                     </div>
-                    <div id="error"></div>
+                    <div id="error">${error}</div>
                     <div class="save-info">
                         <input type="submit" value="Lưu thay đổi">
                     </div>

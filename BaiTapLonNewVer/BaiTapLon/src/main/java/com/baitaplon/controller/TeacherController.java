@@ -63,11 +63,28 @@ public class TeacherController {
     @RequestMapping(value = "/teacher/list-question", method = RequestMethod.GET)
     public String handleQuestion( Model model ) {
         QuestionDAO questionDAO = new QuestionDAO();
-        List questionList = questionDAO.getList();
+        List questionList = questionDAO.getListQuestionTeacher();
         Question question = new Question();
         model.addAttribute("question", question);
         model.addAttribute("questionList", questionList);
         return "teacher/list-question";
+    }
+
+    @RequestMapping(value = {"/teacher/search-question"}, method = RequestMethod.GET)
+    public ModelAndView search(HttpServletRequest request) {
+        ModelAndView modelAndView = new ModelAndView();
+        String search = request.getParameter("search");
+        if (search == "") {
+            modelAndView.setViewName("redirect:/teacher/list-question");
+            return modelAndView;
+        }
+        QuestionDAO questionDAO = new QuestionDAO();
+        List questionList = questionDAO.find(search);
+        Question question = new Question();
+        modelAndView.addObject("question", question);
+        modelAndView.addObject("questionList", questionList);
+        modelAndView.setViewName("teacher/list-question");
+        return modelAndView;
     }
 
     @RequestMapping(value = "/teacher/list-question/add", method = RequestMethod.POST)
@@ -118,6 +135,8 @@ public class TeacherController {
         return "redirect:/teacher/list-question";
     }
 
+
+
     @RequestMapping(value = "/teacher/scores-table", method = RequestMethod.GET)
     public String showScoresTable(Model model) {
         SVQuestionDAO svQuestionDAO = new SVQuestionDAO();
@@ -163,4 +182,6 @@ public class TeacherController {
         }
         return modelAndView;
     }
+
+
 }

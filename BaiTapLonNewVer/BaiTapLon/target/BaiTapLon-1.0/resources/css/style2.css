@@ -87,9 +87,15 @@ a:focus {
 }
 
 #sidebar ul p {
-    color: #fff;
-    padding: 10px;
+    color: #000;
+    padding: 30px 10px;
+    display: block;
+    background-color: #efefef;
+    margin: 0 15px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 20px black;
 }
+
 
 
 #sidebar ul li a {

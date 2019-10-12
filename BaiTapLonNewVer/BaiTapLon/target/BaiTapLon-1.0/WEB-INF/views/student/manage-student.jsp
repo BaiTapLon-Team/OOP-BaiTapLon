@@ -264,7 +264,7 @@
                     </div>
                     <div class="form-group">
                         <label for="magv" class="col-form-label">Giáo viên quản lý</label>
-                        <form:input class="form-control" type="text" id="magv" path="magv" disabled="true"/>
+                        <form:input class="form-control" type="text" id="magv" path="magv"/>
                     </div>
                     <input type="submit" id="submit" value="submit" style="display: none">
                 </form:form>

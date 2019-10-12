@@ -22,15 +22,14 @@ public class ManagerTeacherController {
         List<Teacher> teachers = null;
         String param = request.getParameter("page");
         int totalPage = 0;  // Số trang
-        int recordPage = 10; // Số bản ghi trong một trang
+        int recordPage = 12; // Số bản ghi trong một trang
         int currPage = 1;  // Trang hiện tại.
         if (param != null) {
             currPage = Integer.parseInt(param);   // Chuyển trang khi người dùng ấn vào số trang ở dưới.
         }
-        if(request.getSession().getAttribute("admin") == null) {
+        if (request.getSession().getAttribute("admin") == null) {
             modelAndView.setViewName("redirect:/admin-login");
-        }
-        else {
+        } else {
             TeacherDAO teacherDAO = new TeacherDAO();
             try {
                 int count = teacherDAO.countTeacher();
@@ -47,7 +46,7 @@ public class ManagerTeacherController {
         modelAndView.addObject("currPage", currPage);
         Teacher teacher = new Teacher();
         modelAndView.addObject(teacher);
-        return  modelAndView;
+        return modelAndView;
     }
 
 //    @RequestMapping(value = {"/manage-teacher/edit"}, method = RequestMethod.GET)
@@ -97,9 +96,10 @@ public class ManagerTeacherController {
     }
 
     @RequestMapping(value = {"/manage-teacher/add-teacher"}, method = RequestMethod.GET)
-    public ModelAndView addStudent(HttpServletRequest request) {
+    public ModelAndView addStudent(@ModelAttribute(name = "error") String error, HttpServletRequest request) {
         ModelAndView modelAndView = new ModelAndView();
         Teacher teacher = new Teacher();
+        modelAndView.addObject("error", error);
         modelAndView.addObject("teacher", teacher);
         modelAndView.setViewName("teacher/add-teacher");
         return modelAndView;
@@ -111,13 +111,28 @@ public class ManagerTeacherController {
         ModelAndView modelAndView = new ModelAndView();
         TeacherDAO teacherDAO = new TeacherDAO();
 //        student.setMagv(temp.getId());
+        String error;
         try {
-            teacherDAO.add(teacher);
+            if (teacherDAO.validate(teacher) == 0) {
+                teacherDAO.add(teacher);
+                modelAndView.setViewName("redirect:/manage-teacher");
+            } else if (teacherDAO.validate(teacher) == 3) {
+                error = "Mã giáo viên và username đã tồn tại.";
+                modelAndView.addObject("error", error);
+                modelAndView.setViewName("redirect:/manage-teacher/add-teacher");
+            } else if (teacherDAO.validate(teacher) == 2) {
+                error = "Mã giáo viên đã tồn tại.";
+                modelAndView.addObject("error", error);
+                modelAndView.setViewName("redirect:/manage-teacher/add-teacher");
+            } else if (teacherDAO.validate(teacher) == 1) {
+                error = "Username đã tồn tại.";
+                modelAndView.addObject("error", error);
+                modelAndView.setViewName("redirect:/manage-teacher/add-teacher");
+            }
         } catch (SQLException e) {
             System.out.println("Can not add");
             e.printStackTrace();
         }
-        modelAndView.setViewName("redirect:/manage-teacher");
         return modelAndView;
     }
 
@@ -125,7 +140,7 @@ public class ManagerTeacherController {
     public ModelAndView search(HttpServletRequest request) {
         ModelAndView modelAndView = new ModelAndView();
         String search = request.getParameter("search");
-        if(search == "") {
+        if (search == "") {
             modelAndView.setViewName("redirect:/manage-teacher");
             return modelAndView;
         }
@@ -138,14 +153,13 @@ public class ManagerTeacherController {
         if (param != null) {
             currPage = Integer.parseInt(param);   // Chuyển trang khi người dùng ấn vào số trang ở dưới.
         }
-        if(request.getSession().getAttribute("admin") == null) {
+        if (request.getSession().getAttribute("admin") == null) {
             modelAndView.setViewName("redirect:/admin-login");
-        }
-        else {
+        } else {
             TeacherDAO teacherDAO = new TeacherDAO();
             try {
                 int count = teacherDAO.countTeacher();
-                teachers = teacherDAO.find(search,recordPage, recordPage * (currPage - 1));
+                teachers = teacherDAO.find(search, recordPage, recordPage * (currPage - 1));
                 totalPage = (int) Math.floor(count / recordPage) + 1;
             } catch (Exception e) {
                 System.out.println("Can not get list teacher");
@@ -158,6 +172,6 @@ public class ManagerTeacherController {
         modelAndView.addObject("currPage", currPage);
         Teacher teacher = new Teacher();
         modelAndView.addObject("teacher", teacher);
-        return  modelAndView;
+        return modelAndView;
     }
 }

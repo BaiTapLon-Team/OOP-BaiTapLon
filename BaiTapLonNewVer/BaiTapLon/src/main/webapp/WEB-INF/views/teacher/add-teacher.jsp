@@ -152,7 +152,7 @@
                         <form:input type="text" id="coefficientsSalary" path="coefficientsSalary"
                                name="coefficientsSalary" />
                     </div>
-                    <div id="error"></div>
+                    <div id="error">${error}</div>
                     <div class="save-info">
                         <input type="submit" value="Lưu thay đổi">
                     </div>

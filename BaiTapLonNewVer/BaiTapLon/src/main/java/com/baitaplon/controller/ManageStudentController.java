@@ -22,7 +22,7 @@ public class ManageStudentController {
         List<Student> students = null;
         String param = request.getParameter("page");
         int totalPage = 0;  // Số trang
-        int recordPage = 10; // Số bản ghi trong một trang
+        int recordPage = 12; // Số bản ghi trong một trang
         int currPage = 1;  // Trang hiện tại.
         if (param != null) {
             currPage = Integer.parseInt(param);   // Chuyển trang khi người dùng ấn vào số trang ở dưới.
@@ -42,7 +42,7 @@ public class ManageStudentController {
         modelAndView.addObject("currPage", currPage);
         Student student = new Student();
         modelAndView.addObject("student", student);
-        return  modelAndView;
+        return modelAndView;
     }
 
 //    @RequestMapping(value = {"/manage-student/edit"}, method = RequestMethod.GET)
@@ -66,6 +66,7 @@ public class ManageStudentController {
 //        student.setId(id);
         ModelAndView modelAndView = new ModelAndView();
         StudentsDAO studentsDAO = new StudentsDAO();
+        String error;
         try {
             studentsDAO.edit(student);
         } catch (SQLException e) {
@@ -92,9 +93,10 @@ public class ManageStudentController {
     }
 
     @RequestMapping(value = {"/manage-student/add-student"}, method = RequestMethod.GET)
-    public ModelAndView addStudent(HttpServletRequest request) {
+    public ModelAndView addStudent(@ModelAttribute(name = "error") String error, HttpServletRequest request) {
         ModelAndView modelAndView = new ModelAndView();
         Student student = new Student();
+        modelAndView.addObject("error", error);
         modelAndView.addObject("student", student);
         modelAndView.setViewName("student/add-student");
         return modelAndView;
@@ -104,21 +106,40 @@ public class ManageStudentController {
     public ModelAndView addStudent(@ModelAttribute(name = "student") Student student, HttpServletRequest request) {
         ModelAndView modelAndView = new ModelAndView();
         StudentsDAO studentsDAO = new StudentsDAO();
+        String error;
         try {
-            studentsDAO.add(student);
+            if(studentsDAO.validate(student) == 0){
+                studentsDAO.add(student);
+                modelAndView.setViewName("redirect:/manage-student");
+            }
+            else if(studentsDAO.validate(student) == 3) {
+                error = "Mã sinh viên và username đã tồn tại.";
+                modelAndView.addObject("error", error);
+                modelAndView.setViewName("redirect:/manage-student/add-student");
+            }
+            else if(studentsDAO.validate(student) == 2) {
+                error = "Mã sinh viên đã tồn tại.";
+                modelAndView.addObject("error", error);
+                modelAndView.setViewName("redirect:/manage-student/add-student");
+            }
+            else if(studentsDAO.validate(student) == 1) {
+                error = "Username đã tồn tại.";
+                modelAndView.addObject("error", error);
+                modelAndView.setViewName("redirect:/manage-student/add-student");
+            }
         } catch (SQLException e) {
             System.out.println("Can not add");
             e.printStackTrace();
         }
-        modelAndView.setViewName("redirect:/manage-student");
         return modelAndView;
     }
+
     @RequestMapping(value = {"/manage-student/search"}, method = RequestMethod.GET)
     public ModelAndView search(HttpServletRequest request) {
         ModelAndView modelAndView = new ModelAndView();
         String search = request.getParameter("search");
         System.out.println(search);
-        if(search == "") {
+        if (search == "") {
             modelAndView.setViewName("redirect:/manage-student");
             return modelAndView;
         }
@@ -133,7 +154,7 @@ public class ManageStudentController {
         StudentsDAO studentsDAO = new StudentsDAO();
         try {
             int count = studentsDAO.countStudent();
-            students = studentsDAO.find(search,recordPage, recordPage * (currPage - 1));
+            students = studentsDAO.find(search, recordPage, recordPage * (currPage - 1));
             totalPage = (int) Math.floor(count / recordPage) + 1;
         } catch (Exception e) {
             System.out.println("Can not get list students");

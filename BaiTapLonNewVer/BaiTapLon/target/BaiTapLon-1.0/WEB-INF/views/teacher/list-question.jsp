@@ -122,8 +122,8 @@
                 <button type="button" class="btn btn-primary" data-toggle="modal"
                         data-target=".bd-example-modal-lg">Thêm mới
                 </button>
-                <form class="form-inline" action="#" method="GET">
-                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <form class="form-inline" action="<c:url value="/teacher/search-question"/> " method="GET">
+                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" name="search">
                     <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
                 </form>
             </div>
@@ -133,14 +133,14 @@
                     <div class="question">
                         <input type="hidden" name="questionID${index}" value="${questionList[index].questionID}">
                         <div class="content-question">
-                            <h2>Câu ${index+1}: ${questionList[index].content}?</h2>
+                            <h2>Câu ${index+1}: <span id="content${index}">${questionList[index].content}</span>?</h2>
                             <div style="display: flex">
                                 <button type="button"
-                                        onclick="ModalEditQuestion('${questionList[index].questionID}', '${questionList[index].content}', '${questionList[index].correct}','${questionList[index].anwserA}', '${questionList[index].anwserB}', '${questionList[index].anwserC}', '${questionList[index].anwserD}')"
+                                        onclick="ModalEditQuestion('${questionList[index].questionID}', 'content${index}', '${questionList[index].correct}','${questionList[index].anwserA}', '${questionList[index].anwserB}', '${questionList[index].anwserC}', '${questionList[index].anwserD}')"
                                         data-toggle="modal" data-target=".bd-editQuestion-modal-lg">Sửa
                                 </button>
                                 <a href="<c:url value="/teacher/list-question/delete?id=${questionList[index].questionID}"/>"
-                                   onclick="confirm('Bạn thật sự muốn xóa câu này')">Xóa</a>
+                                   onclick="return confirm('Bạn thật sự muốn xóa câu này')">Xóa</a>
                             </div>
                         </div>
                         <h3>A. ${questionList[index].anwserA}</h3>
@@ -166,7 +166,7 @@
             </div>
             <div class="modal-body">
                 <c:url value="/teacher/list-question/add" var="url"/>
-                <form:form action="${url}" method="POST" modelAttribute="question">
+                <form:form action="${url}" method="POST" modelAttribute="question" onsubmit="return validateForm()" name="addQuestion">
                     <div class="form-group">
                         <label for="content-qs" class="col-form-label">Nội dung câu hỏi</label>
                         <form:textarea class="form-control" name="content" id="content-qs" path="content"/>
@@ -250,12 +250,13 @@
         </div>
     </div>
 </div>
+<button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
 <script type="text/javascript">
     var modalEdit = document.getElementsByClassName("modal")[0];
 
     function ModalEditQuestion(questionId, content, correct, answer_a, answer_b, answer_c, answer_d) {
         document.getElementById("questionID").value = questionId;
-        document.getElementById("content-qs_").value = content;
+        document.getElementById("content-qs_").value = document.getElementById(content).innerHTML;
         document.getElementById("correct_").value = correct;
         document.getElementById("answer_a_").value = answer_a;
         document.getElementById("answer_b_").value = answer_b;
@@ -273,6 +274,35 @@
 
     function submit1() {
         y.click();
+    }
+
+    //Get the button
+    var mybutton = document.getElementById("myBtn");
+
+    // When the user scrolls down 20px from the top of the document, show the button
+    window.onscroll = function() {scrollFunction()};
+
+    function scrollFunction() {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            mybutton.style.display = "block";
+        } else {
+            mybutton.style.display = "none";
+        }
+    }
+
+    // When the user clicks on the button, scroll to the top of the document
+    function topFunction() {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+    }
+    function validateForm() {
+        for (var i = 0; i < 6; i++) {
+            var x = document.forms["addQuestion"][i].value;
+            if (x == "") {
+                document.getElementById("error").innerHTML = "Vui lòng điền đầy đủ các trường thông tin";
+                return false;
+            }
+        }
     }
 </script>
 
